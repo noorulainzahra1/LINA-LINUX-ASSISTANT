@@ -1,0 +1,31 @@
+{
+  "tool_name": "volatility3",
+  "base_command": "volatility3",
+  "parameters": [
+    { "flag": "-f", "description": "Specify memory dump file.", "keywords": ["memory dump", "file", "image"], "requires_value": true },
+    { "flag": "--profile", "description": "Specify the OS profile for the memory dump.", "keywords": ["profile", "os", "operating system"], "requires_value": true },
+    { "flag": "pslist", "description": "List running processes.", "keywords": ["process list", "processes", "running processes"], "requires_value": false },
+    { "flag": "pstree", "description": "Show process tree.", "keywords": ["process tree", "parent child"], "requires_value": false },
+    { "flag": "psscan", "description": "Scan for processes using pool scanning.", "keywords": ["process scan", "pool scan"], "requires_value": false },
+    { "flag": "cmdline", "description": "Display command line arguments for processes.", "keywords": ["command line", "cmdline", "arguments"], "requires_value": false },
+    { "flag": "consoles", "description": "Extract command history from console.", "keywords": ["console", "command history"], "requires_value": false },
+    { "flag": "screenshot", "description": "Save a screenshot of the desktop.", "keywords": ["screenshot", "desktop", "screen"], "requires_value": false },
+    { "flag": "filescan", "description": "Scan for file objects.", "keywords": ["file scan", "files"], "requires_value": false },
+    { "flag": "dumpfiles", "description": "Dump files from memory.", "keywords": ["dump files", "extract files"], "requires_value": false },
+    { "flag": "malfind", "description": "Find hidden and injected code.", "keywords": ["malware", "injection", "hidden code"], "requires_value": false },
+    { "flag": "apihooks", "description": "Detect API hooks.", "keywords": ["api hooks", "hooks", "detection"], "requires_value": false },
+    { "flag": "timeliner", "description": "Create a timeline of system activity.", "keywords": ["timeline", "activity", "events"], "requires_value": false },
+    { "flag": "netscan", "description": "Scan for network connections.", "keywords": ["network scan", "connections", "netstat"], "requires_value": false },
+    { "flag": "connscan", "description": "Scan for network connections using pool scanning.", "keywords": ["connection scan", "pool scan"], "requires_value": false },
+    { "flag": "sockets", "description": "List network sockets.", "keywords": ["sockets", "network sockets"], "requires_value": false },
+    { "flag": "hashdump", "description": "Dump password hashes from memory.", "keywords": ["password hashes", "hash dump", "credentials"], "requires_value": false },
+    { "flag": "lsadump", "description": "Dump LSA secrets from memory.", "keywords": ["lsa secrets", "lsa dump"], "requires_value": false },
+    { "flag": "hivelist", "description": "List registry hives.", "keywords": ["registry hives", "hives"], "requires_value": false },
+    { "flag": "hivedump", "description": "Dump registry hive.", "keywords": ["registry dump", "hive dump"], "requires_value": false },
+    { "flag": "printkey", "description": "Print registry key and subkeys.", "keywords": ["registry key", "print key"], "requires_value": false },
+    { "flag": "clipboard", "description": "Extract clipboard contents.", "keywords": ["clipboard", "copy paste"], "requires_value": false },
+    { "flag": "iehistory", "description": "Extract Internet Explorer history.", "keywords": ["ie history", "browser history"], "requires_value": false },
+    { "flag": "shimcache", "description": "Extract ShimCache data.", "keywords": ["shimcache", "shim cache"], "requires_value": false },
+    { "flag": "prefetch", "description": "Extract Prefetch files.", "keywords": ["prefetch", "prefetch files"], "requires_value": false }
+  ]
+}

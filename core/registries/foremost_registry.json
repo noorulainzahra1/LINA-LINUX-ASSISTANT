@@ -1,0 +1,30 @@
+{
+  "tool_name": "foremost",
+  "base_command": "foremost",
+  "parameters": [
+    { "flag": "-i", "description": "Specify input file.", "keywords": ["input file", "image", "disk"], "requires_value": true },
+    { "flag": "-o", "description": "Specify output directory.", "keywords": ["output directory", "output path"], "requires_value": true },
+    { "flag": "-c", "description": "Specify configuration file.", "keywords": ["config file", "configuration"], "requires_value": true },
+    { "flag": "-t", "description": "Specify file types to recover.", "keywords": ["file types", "types", "recover types"], "requires_value": true },
+    { "flag": "-q", "description": "Quiet mode.", "keywords": ["quiet", "silent"], "requires_value": false },
+    { "flag": "-v", "description": "Verbose mode.", "keywords": ["verbose", "detailed"], "requires_value": false },
+    { "flag": "-d", "description": "Debug mode.", "keywords": ["debug", "debugging"], "requires_value": false },
+    { "flag": "-w", "description": "Write audit file.", "keywords": ["audit file", "write audit"], "requires_value": false },
+    { "flag": "-a", "description": "Append to output files.", "keywords": ["append", "append mode"], "requires_value": false },
+    { "flag": "-k", "description": "Keep corrupted files.", "keywords": ["keep corrupted", "corrupted files"], "requires_value": false },
+    { "flag": "-s", "description": "Skip file system checks.", "keywords": ["skip checks", "no fs check"], "requires_value": false },
+    { "flag": "-b", "description": "Specify block size.", "keywords": ["block size", "sector size"], "requires_value": true },
+    { "flag": "-l", "description": "Specify length to scan.", "keywords": ["scan length", "length"], "requires_value": true },
+    { "flag": "-m", "description": "Specify maximum file size.", "keywords": ["max file size", "maximum size"], "requires_value": true },
+    { "flag": "-n", "description": "Specify minimum file size.", "keywords": ["min file size", "minimum size"], "requires_value": true },
+    { "flag": "-p", "description": "Specify page size.", "keywords": ["page size", "sector size"], "requires_value": true },
+    { "flag": "-r", "description": "Recover files in reverse order.", "keywords": ["reverse", "reverse order"], "requires_value": false },
+    { "flag": "-x", "description": "Extract files only.", "keywords": ["extract only", "extract files"], "requires_value": false },
+    { "flag": "-y", "description": "Extract files with headers only.", "keywords": ["headers only", "with headers"], "requires_value": false },
+    { "flag": "-z", "description": "Extract files with footers only.", "keywords": ["footers only", "with footers"], "requires_value": false },
+    { "flag": "-h", "description": "Show help.", "keywords": ["help", "usage"], "requires_value": false },
+    { "flag": "-V", "description": "Show version.", "keywords": ["version", "info"], "requires_value": false },
+    { "flag": "--help", "description": "Show help.", "keywords": ["help", "usage"], "requires_value": false },
+    { "flag": "--version", "description": "Show version.", "keywords": ["version", "info"], "requires_value": false }
+  ]
+}

@@ -1,0 +1,328 @@
+# LINA Configuration File
+# Phoenix Architecture v3.0
+# This is the main configuration file for LINA
+
+# ==========================================
+# AI/LLM CONFIGURATION
+# ==========================================
+ai:
+  # Default AI provider (options: gemini, openai, claude, groq, ollama)
+  default_provider: "gemini"
+  
+  # Google Gemini Configuration
+  gemini:
+    model: "gemini-2.0-flash"  # or gemini-pro, gemini-1.5-flash
+    api_key_env: "GOOGLE_API_KEY"
+    temperature: 0.7
+    max_tokens: 2048
+    timeout: 45  # Increased timeout for better reliability
+    max_retries: 3  # Number of retry attempts
+    retry_delay: 2  # Base delay between retries (seconds)
+  
+
+
+# ==========================================
+# LOGGING CONFIGURATION
+# ==========================================
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+  
+  # Log file location
+  file: "core/data/logs/lina_activity.log"
+  
+  # Console output
+  console: true
+  
+  # Log format
+  format: "%(asctime)s - %(name)s - [%(levelname)s] - %(message)s"
+  
+  # Rotate logs
+  rotate:
+    enabled: true
+    max_bytes: 10485760  # 10MB
+    backup_count: 5
+
+# ==========================================
+# DATABASE CONFIGURATION
+# ==========================================
+database:
+  # SQLite database for session history
+  session_db: "core/data/db/lina_history.sqlite"
+  
+  # Learning database
+  learning_db: "core/data/db/learning.sqlite"
+  
+  # Auto-create tables
+  auto_create: true
+
+# ==========================================
+# RISK ASSESSMENT CONFIGURATION
+# ==========================================
+risk_assessment:
+  # Enable dual-layer risk assessment
+  enabled: true
+  
+  # Risk database path
+  database: "core/registry/risk_database.json"
+  
+  # Use AI for dynamic risk analysis
+  use_ai: true
+  
+  # Risk levels that require confirmation
+  confirm_on:
+    - "HIGH"
+    - "RISKY"
+    - "CRITICAL"
+    - "BLOCKED"
+  
+  # Default to safe (deny) if risk assessment fails
+  fail_safe: true
+  
+  # Color coding
+  colors:
+    SAFE: "green"
+    UNKNOWN: "white"
+    LOW: "cyan"
+    MEDIUM: "yellow"
+    HIGH: "bright_yellow"
+    RISKY: "red"
+    CRITICAL: "bold red"
+    BLOCKED: "bold red on white"
+
+# ==========================================
+# TOOL CONFIGURATION
+# ==========================================
+tools:
+  # Tool registry path
+  registry: "core/registry/tool_registry.json"
+  
+  # Auto-detect installed tools on startup
+  auto_detect: true
+  
+  # Tool verification timeout (seconds)
+  verification_timeout: 5
+  
+  # Cache tool availability
+  cache_enabled: true
+  cache_ttl: 300  # 5 minutes
+
+# ==========================================
+# COMMAND EXECUTION CONFIGURATION
+# ==========================================
+execution:
+  # Command execution timeout (seconds)
+  timeout: 300  # 5 minutes
+  
+  # Use sudo for privileged commands (ask for password)
+  use_sudo: true
+  
+  # Capture command output
+  capture_output: true
+  
+  # Max output size (bytes)
+  max_output_size: 1048576  # 1MB
+  
+  # Shell to use for command execution
+  shell: "/bin/bash"
+  
+  # Working directory for commands
+  working_dir: null  # null = current directory
+
+# ==========================================
+# SESSION MANAGEMENT
+# ==========================================
+session:
+  # Auto-save session
+  auto_save: true
+  
+  # Auto-save interval (seconds)
+  auto_save_interval: 60
+  
+  # Session timeout (seconds, 0 = no timeout)
+  timeout: 0
+  
+  # Max history size
+  max_history: 1000
+  
+  # Save session reports
+  save_reports: true
+  
+  # Reports directory
+  reports_dir: "output"
+
+# ==========================================
+# REPORT GENERATION
+# ==========================================
+reports:
+  # Available report types
+  types:
+    - "penetration_test"
+    - "vulnerability_assessment"
+    - "forensics_investigation"
+    - "compliance_audit"
+  
+  # Default report format
+  default_format: "markdown"
+  
+  # Export formats
+  export_formats:
+    - "markdown"
+    - "html"
+    - "json"
+  
+  # Include command outputs in reports
+  include_outputs: true
+  
+  # Report template directory
+  templates_dir: "agent/templates"
+
+# ==========================================
+# FORENSICS CONFIGURATION
+# ==========================================
+forensics:
+  # Forensics tools to check
+  required_tools:
+    - "volatility3"
+    - "autopsy"
+    - "sleuthkit"
+    - "foremost"
+    - "binwalk"
+    - "strings"
+  
+  # Auto-install missing tools
+  auto_install: false
+  
+  # Evidence handling
+  evidence:
+    # Preserve timestamps
+    preserve_timestamps: true
+    
+    # Create checksums
+    create_checksums: true
+    
+    # Checksum algorithm
+    checksum_algorithm: "sha256"
+
+# ==========================================
+# USER INTERFACE CONFIGURATION
+# ==========================================
+ui:
+  # Use Rich formatting
+  rich_formatting: true
+  
+  # Color scheme
+  color_scheme: "auto"  # auto, light, dark
+  
+  # Show banner on startup
+  show_banner: true
+  
+  # Show AI capabilities on startup
+  show_capabilities: true
+  
+  # Prompt symbol
+  prompt: "LINA"
+  
+  # Expert mode indicator
+  show_expert_mode: true
+  
+  # Syntax highlighting
+  syntax_highlighting: true
+
+# ==========================================
+# EXPERT MODES
+# ==========================================
+expert_modes:
+  available:
+    - "Student"
+    - "Security Analyst"
+    - "Penetration Tester"
+    - "Forensic Expert"
+    - "Red Teamer"
+  
+  default: "Security Analyst"
+
+# ==========================================
+# PERFORMANCE CONFIGURATION
+# ==========================================
+performance:
+  # Max concurrent operations
+  max_concurrent: 5
+  
+  # Cache AI responses
+  cache_ai_responses: true
+  
+  # AI response cache TTL (seconds)
+  ai_cache_ttl: 3600  # 1 hour
+  
+  # Enable async operations where possible
+  async_enabled: true
+
+# ==========================================
+# SECURITY CONFIGURATION
+# ==========================================
+security:
+  # Require risk assessment for all commands
+  require_risk_assessment: true
+  
+  # Sanitize command inputs
+  sanitize_inputs: true
+  
+  # Allowed command characters (regex)
+  allowed_chars: "^[a-zA-Z0-9-_./:= ]*$"
+  
+  # Blocked commands (never allow)
+  blocked_commands:
+    - "rm -rf /"
+    - "dd if=/dev/zero of=/dev/sda"
+    - ":(){ :|:& };:"
+  
+  # Audit trail
+  audit:
+    enabled: true
+    log_file: "output/audit.txt"
+
+# ==========================================
+# COLLABORATION CONFIGURATION
+# ==========================================
+collaboration:
+  # Enable team features
+  enabled: true
+  
+  # Teams directory
+  teams_dir: "core/data/teams"
+  
+  # Findings directory
+  findings_dir: "core/data/findings"
+  
+  # Max team size
+  max_team_size: 10
+
+# ==========================================
+# UPDATE CONFIGURATION
+# ==========================================
+updates:
+  # Check for updates on startup
+  check_on_startup: false
+  
+  # Update check URL
+  update_url: "https://github.com/yourusername/lina"
+  
+  # Auto-update
+  auto_update: false
+
+# ==========================================
+# DEVELOPMENT/DEBUG
+# ==========================================
+development:
+  # Debug mode
+  debug: false
+  
+  # Verbose output
+  verbose: false
+  
+  # Test mode (don't execute actual commands)
+  test_mode: false
+  
+  # Profile performance
+  profiling: false

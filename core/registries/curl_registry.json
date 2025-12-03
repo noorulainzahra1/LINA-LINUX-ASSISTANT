@@ -1,0 +1,55 @@
+{
+  "tool_name": "curl",
+  "base_command": "curl",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "URL to request.",
+      "keywords": ["url", "target", "endpoint"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-X",
+      "description": "HTTP method to use (GET, POST, PUT, DELETE, etc.).",
+      "keywords": ["method", "request method", "http verb"],
+      "requires_value": true
+    },
+    {
+      "flag": "-H",
+      "description": "HTTP header to include in the request.",
+      "keywords": ["header", "http header"],
+      "requires_value": true
+    },
+    {
+      "flag": "-d",
+      "description": "Data to send in the request body.",
+      "keywords": ["data", "body", "payload"],
+      "requires_value": true
+    },
+    {
+      "flag": "-u",
+      "description": "Username and password for authentication (user:pass).",
+      "keywords": ["auth", "authentication", "credentials"],
+      "requires_value": true
+    },
+    {
+      "flag": "-v",
+      "description": "Make the operation more talkative/verbose.",
+      "keywords": ["verbose", "debug"],
+      "requires_value": false
+    },
+    {
+      "flag": "-o",
+      "description": "Output file to save the response.",
+      "keywords": ["output", "save", "file"],
+      "requires_value": true
+    },
+    {
+      "flag": "-I",
+      "description": "Fetch headers only (HEAD request).",
+      "keywords": ["headers only", "head request"],
+      "requires_value": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "tool_name": "gobuster",
+  "base_command": "gobuster",
+  "parameters": [
+    {
+      "flag": "dir",
+      "description": "The subcommand for classic directory and file brute-forcing.",
+      "keywords": ["directory", "dir", "discovery"],
+      "requires_value": false,
+      "type": "subcommand"
+    },
+    {
+      "flag": "-u",
+      "description": "The target URL or domain for the scan.",
+      "keywords": ["url", "target", "host"],
+      "requires_value": true
+    },
+    {
+      "flag": "-w",
+      "description": "The path to the wordlist file to use for brute-forcing.",
+      "keywords": ["wordlist", "dictionary", "list"],
+      "requires_value": true
+    },
+    {
+      "flag": "-x",
+      "description": "A comma-separated list of file extensions to search for (e.g., php,html,txt).",
+      "keywords": ["extensions", "file types"],
+      "requires_value": true
+    }
+  ]
+}

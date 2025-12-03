@@ -1,0 +1,21 @@
+{
+  "name": "icat",
+  "description": "A Sleuth Kit tool that displays the contents of a file based on its inode number.",
+  "keywords": ["file content", "inode", "forensic tool", "file extraction"],
+  "category": "Sleuth Kit",
+  "usage": "icat [options] image [images] inode",
+  "examples": [
+    "icat image.dd 12345",
+    "icat -f ntfs image.dd 12345",
+    "icat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "binary/text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/icat.html"
+}

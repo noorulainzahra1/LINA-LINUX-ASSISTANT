@@ -1,0 +1,48 @@
+{
+  "tool_name": "rustscan",
+  "base_command": "rustscan",
+  "parameters": [
+    {
+      "flag": "-a",
+      "description": "Target IP addresses or hosts (comma separated).",
+      "keywords": ["addresses", "targets", "hosts"],
+      "requires_value": true
+    },
+    {
+      "flag": "-p",
+      "description": "Ports to scan (e.g., 22,80,443 or 1-1000).",
+      "keywords": ["ports", "port range"],
+      "requires_value": true
+    },
+    {
+      "flag": "--ulimit",
+      "description": "Number of parallel sockets (default 5000).",
+      "keywords": ["ulimit", "sockets", "parallel"],
+      "requires_value": true
+    },
+    {
+      "flag": "-t",
+      "description": "Timeout in milliseconds (default 1500).",
+      "keywords": ["timeout", "ms"],
+      "requires_value": true
+    },
+    {
+      "flag": "--",
+      "description": "Arguments to pass to nmap after port discovery.",
+      "keywords": ["nmap args", "nmap options"],
+      "requires_value": true
+    },
+    {
+      "flag": "-g",
+      "description": "Greppable output format.",
+      "keywords": ["grep", "greppable"],
+      "requires_value": false
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet mode, only show open ports.",
+      "keywords": ["quiet", "minimal"],
+      "requires_value": false
+    }
+  ]
+}

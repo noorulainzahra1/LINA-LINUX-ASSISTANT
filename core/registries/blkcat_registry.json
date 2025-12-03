@@ -1,0 +1,21 @@
+{
+  "name": "blkcat",
+  "description": "A Sleuth Kit tool that displays the contents of a data unit (block) from a disk image or device.",
+  "keywords": ["block content", "disk analysis", "forensic tool", "data unit"],
+  "category": "Sleuth Kit",
+  "usage": "blkcat [options] image [images] block_num",
+  "examples": [
+    "blkcat image.dd 12345",
+    "blkcat -f ntfs image.dd 12345",
+    "blkcat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "binary/text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/blkcat.html"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "blkstat",
+  "description": "A Sleuth Kit tool that displays the statistics of a data unit (block) from a disk image.",
+  "keywords": ["block statistics", "disk analysis", "forensic tool", "data unit stats"],
+  "category": "Sleuth Kit",
+  "usage": "blkstat [options] image [images] block_num",
+  "examples": [
+    "blkstat image.dd 12345",
+    "blkstat -f ntfs image.dd 12345",
+    "blkstat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/blkstat.html"
+}

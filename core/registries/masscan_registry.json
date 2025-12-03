@@ -1,0 +1,43 @@
+{
+  "tool_name": "masscan",
+  "base_command": "masscan",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Target IP range or hostname to scan.",
+      "keywords": ["target", "ip", "range"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-p",
+      "description": "Ports to scan (e.g., 1-1000, 80,443).",
+      "keywords": ["ports", "port range"],
+      "requires_value": true
+    },
+    {
+      "flag": "--rate",
+      "description": "Packets per second transmission rate.",
+      "keywords": ["rate", "speed", "pps"],
+      "requires_value": true
+    },
+    {
+      "flag": "--banners",
+      "description": "Capture banners from open ports.",
+      "keywords": ["banners", "service info"],
+      "requires_value": false
+    },
+    {
+      "flag": "-oG",
+      "description": "Output results in grep-able format.",
+      "keywords": ["output", "grep format"],
+      "requires_value": true
+    },
+    {
+      "flag": "--exclude",
+      "description": "IP addresses/ranges to exclude from scan.",
+      "keywords": ["exclude", "blacklist"],
+      "requires_value": true
+    }
+  ]
+}

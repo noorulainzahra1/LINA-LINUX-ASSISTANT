@@ -1,0 +1,56 @@
+{
+  "tool_name": "dirb",
+  "base_command": "dirb",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Target URL to scan.",
+      "keywords": ["url", "target"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": null,
+      "description": "Wordlist file (optional, uses built-in if not specified).",
+      "keywords": ["wordlist", "dictionary"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-a",
+      "description": "User Agent string to use.",
+      "keywords": ["user agent", "ua"],
+      "requires_value": true
+    },
+    {
+      "flag": "-p",
+      "description": "Proxy URL to use (e.g., http://proxy:8080).",
+      "keywords": ["proxy", "http proxy"],
+      "requires_value": true
+    },
+    {
+      "flag": "-c",
+      "description": "Cookie string to include in requests.",
+      "keywords": ["cookie", "session"],
+      "requires_value": true
+    },
+    {
+      "flag": "-H",
+      "description": "Add custom header to HTTP requests.",
+      "keywords": ["header", "http header"],
+      "requires_value": true
+    },
+    {
+      "flag": "-X",
+      "description": "File extensions to append (e.g., .php,.html).",
+      "keywords": ["extensions", "file types"],
+      "requires_value": true
+    },
+    {
+      "flag": "-r",
+      "description": "Don't search recursively.",
+      "keywords": ["no recursive", "non-recursive"],
+      "requires_value": false
+    }
+  ]
+}

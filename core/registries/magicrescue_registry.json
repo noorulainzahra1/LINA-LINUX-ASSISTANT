@@ -1,0 +1,21 @@
+{
+  "name": "magicrescue",
+  "description": "A tool to recover files from a disk image or device by scanning for magic bytes and file signatures.",
+  "keywords": ["file recovery", "magic bytes", "forensic carving", "data recovery"],
+  "category": "Forensic Carving",
+  "usage": "magicrescue [options] device output_dir",
+  "examples": [
+    "magicrescue -d /dev/sda1 /recovery/",
+    "magicrescue -r /path/to/image.dd /recovery/",
+    "magicrescue -M /usr/share/magicrescue/magic /dev/sda1 /recovery/"
+  ],
+  "common_flags": {
+    "-d": "Device to scan",
+    "-r": "Raw image file",
+    "-M": "Magic file path",
+    "-b": "Block size"
+  },
+  "output_format": "files",
+  "installation": "apt install magicrescue",
+  "documentation": "https://github.com/bmk/magicrescue"
+}

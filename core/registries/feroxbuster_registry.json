@@ -1,0 +1,48 @@
+{
+  "tool_name": "feroxbuster",
+  "base_command": "feroxbuster",
+  "parameters": [
+    {
+      "flag": "-u",
+      "description": "Target URL to enumerate (e.g., https://example.com).",
+      "keywords": ["url", "target", "host"],
+      "requires_value": true
+    },
+    {
+      "flag": "-w",
+      "description": "Path to a wordlist file.",
+      "keywords": ["wordlist", "dictionary", "list"],
+      "requires_value": true
+    },
+    {
+      "flag": "-x",
+      "description": "Comma-separated list of file extensions to append (e.g., php,html,txt).",
+      "keywords": ["extensions", "file types"],
+      "requires_value": true
+    },
+    {
+      "flag": "-r",
+      "description": "Enable recursive scanning of discovered directories.",
+      "keywords": ["recursive", "deep"],
+      "requires_value": false
+    },
+    {
+      "flag": "-C",
+      "description": "Comma-separated list of expected HTTP status codes to filter (e.g., 204,301,302).",
+      "keywords": ["status", "codes", "filter"],
+      "requires_value": true
+    },
+    {
+      "flag": "-t",
+      "description": "Number of concurrent threads (default 10).",
+      "keywords": ["threads", "speed"],
+      "requires_value": true
+    },
+    {
+      "flag": "-o",
+      "description": "Output file path to save results.",
+      "keywords": ["output", "save", "file"],
+      "requires_value": true
+    }
+  ]
+}

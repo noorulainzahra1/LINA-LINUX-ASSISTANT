@@ -1,0 +1,21 @@
+{
+  "name": "blkls",
+  "description": "A Sleuth Kit tool that lists the unallocated blocks of a file system in a disk image.",
+  "keywords": ["unallocated blocks", "disk analysis", "forensic tool", "file system"],
+  "category": "Sleuth Kit",
+  "usage": "blkls [options] image [images]",
+  "examples": [
+    "blkls image.dd",
+    "blkls -f ntfs image.dd",
+    "blkls -o 512 image.dd"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/blkls.html"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "wapiti",
+  "description": "A web application vulnerability scanner that performs black-box scans to detect security vulnerabilities in web applications.",
+  "keywords": ["web vulnerability scanner", "security testing", "web application security", "automated scanning"],
+  "category": "Web Scanning",
+  "usage": "wapiti [options] URL",
+  "examples": [
+    "wapiti -u http://example.com",
+    "wapiti -u http://example.com -f json -o report.json",
+    "wapiti -u http://example.com -m sql,xss"
+  ],
+  "common_flags": {
+    "-u": "Target URL",
+    "-f": "Output format",
+    "-o": "Output file",
+    "-m": "Modules to use"
+  },
+  "output_format": "html/json/xml",
+  "installation": "apt install wapiti",
+  "documentation": "https://wapiti-scanner.github.io/"
+}

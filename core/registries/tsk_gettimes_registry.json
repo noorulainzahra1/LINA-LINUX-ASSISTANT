@@ -1,0 +1,21 @@
+{
+  "name": "tsk_gettimes",
+  "description": "A Sleuth Kit tool that extracts and displays file system timestamps from a disk image.",
+  "keywords": ["timestamps", "file times", "forensic tool", "metadata extraction"],
+  "category": "Sleuth Kit",
+  "usage": "tsk_gettimes [options] image [images]",
+  "examples": [
+    "tsk_gettimes image.dd",
+    "tsk_gettimes -f ntfs image.dd",
+    "tsk_gettimes -o 512 image.dd"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/tsk_gettimes.html"
+}

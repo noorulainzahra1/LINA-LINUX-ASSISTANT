@@ -1,0 +1,412 @@
+{
+  "^rm -rf /": {
+    "risk": "CRITICAL",
+    "explanation": "This command will recursively and forcefully delete the entire root filesystem, destroying the operating system."
+  },
+  "^mkfs\\..* /dev/sd": {
+    "risk": "CRITICAL",
+    "explanation": "This command formats a disk partition, causing complete and irreversible data loss on that partition."
+  },
+  "^sudo": {
+    "risk": "HIGH",
+    "explanation": "Executes a command with root privileges, allowing for system-wide changes."
+  },
+  "^chmod .*777": {
+    "risk": "HIGH",
+    "explanation": "Applies world-writable permissions to a file or directory, which is a major security risk."
+  },
+  "^useradd": {
+    "risk": "HIGH",
+    "explanation": "Creates a new user account on the system."
+  },
+  "^passwd": {
+    "risk": "HIGH",
+    "explanation": "Changes a user's password, a privileged operation."
+  },
+  "^systemctl (start|stop|restart|enable|disable)": {
+    "risk": "MEDIUM",
+    "explanation": "Manages system services, which can affect the system's operation and availability."
+  },
+  "^apt|^yum|^dnf|^pacman": {
+    "risk": "MEDIUM",
+    "explanation": "Uses a package manager to install, remove, or update software, modifying the system's state."
+  },
+  "^wget|^curl": {
+    "risk": "LOW",
+    "explanation": "Downloads files from the internet, which could potentially be malicious."
+  },
+  "^nmap": {
+    "risk": "LOW",
+    "explanation": "Performs an active network scan against a target, which may be logged or detected."
+  },
+  "^ls": {
+    "risk": "SAFE",
+    "explanation": "Lists directory contents; a read-only operation."
+  },
+  "^cd": {
+    "risk": "SAFE",
+    "explanation": "Changes the current directory; a harmless navigational command."
+  },
+  "^pwd": {
+    "risk": "SAFE",
+    "explanation": "Prints the current working directory; a read-only operation."
+  },
+  "^cat|^less|^more": {
+    "risk": "SAFE",
+    "explanation": "Views file contents; a read-only operation."
+  },
+  "^echo": {
+    "risk": "SAFE",
+    "explanation": "Prints text to the console; a harmless operation."
+  },
+
+  "^dd if=.* of=/dev/sd[a-z]": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites an entire disk with arbitrary data."
+  },
+  "^> /dev/sd[a-z]": {
+    "risk": "CRITICAL",
+    "explanation": "Redirects output to a raw disk device, corrupting it."
+  },
+  "^mv / /dev/null": {
+    "risk": "CRITICAL",
+    "explanation": "Moves root filesystem to null device, deleting it."
+  },
+  "^shred -n .* /dev/sd[a-z]": {
+    "risk": "CRITICAL",
+    "explanation": "Securely overwrites a disk, permanently erasing data."
+  },
+  "^mkfs\\..* /dev/nvme": {
+    "risk": "CRITICAL",
+    "explanation": "Formats an NVMe drive, wiping everything."
+  },
+  "^rm -rf /boot": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes kernel and bootloader files, preventing boot."
+  },
+  "^rm -rf /etc": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes essential system configuration files."
+  },
+  "^rm -rf /bin": {
+    "risk": "CRITICAL",
+    "explanation": "Removes system binaries, making commands unusable."
+  },
+  "^rm -rf /usr": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes user applications and libraries."
+  },
+  "^rm -rf /var": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes logs, mail, and service data."
+  },
+  "^dd if=/dev/zero of=/dev/mem": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites system memory, causing kernel panic."
+  },
+  "^echo .* > /dev/mem": {
+    "risk": "CRITICAL",
+    "explanation": "Writes arbitrary data to system memory."
+  },
+  "^echo .* > /proc/sysrq-trigger": {
+    "risk": "CRITICAL",
+    "explanation": "Triggers kernel crash, reboot, or memory dump."
+  },
+  "^chmod -R 000 /": {
+    "risk": "CRITICAL",
+    "explanation": "Removes all access permissions from root filesystem."
+  },
+  "^chown -R nobody:nogroup /": {
+    "risk": "CRITICAL",
+    "explanation": "Reassigns all files to unprivileged user."
+  },
+  "^kill -9 1": {
+    "risk": "CRITICAL",
+    "explanation": "Kills the init process, crashing the system."
+  },
+  "^kill -9 -1": {
+    "risk": "CRITICAL",
+    "explanation": "Kills all processes, halting the system."
+  },
+  "^:(){ :|:& };:": {
+    "risk": "CRITICAL",
+    "explanation": "Fork bomb that spawns infinite processes."
+  },
+  "^dd if=/dev/zero of=/dev/sda bs=1M": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites primary disk with zeros."
+  },
+  "^mkfs.ext4 /dev/sda1": {
+    "risk": "CRITICAL",
+    "explanation": "Formats root partition."
+  },
+  "^rm -rf --no-preserve-root /": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes root filesystem even if protected."
+  },
+  "^rm -rf /home": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes all user data and profiles."
+  },
+  "^wipe /dev/sd[a-z]": {
+    "risk": "CRITICAL",
+    "explanation": "Securely erases entire disk."
+  },
+  "^rmdir --ignore-fail-on-non-empty /": {
+    "risk": "CRITICAL",
+    "explanation": "Attempts to remove the root directory."
+  },
+  "^rm -rf /*": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes all files in root directory."
+  },
+  "^mkfs.btrfs /dev/sd": {
+    "risk": "CRITICAL",
+    "explanation": "Formats a drive with BTRFS filesystem."
+  },
+  "^mkfs.xfs /dev/sd": {
+    "risk": "CRITICAL",
+    "explanation": "Formats a drive with XFS filesystem."
+  },
+  "^mkfs.vfat /dev/sd": {
+    "risk": "CRITICAL",
+    "explanation": "Formats a drive with FAT filesystem."
+  },
+  "^blkdiscard /dev/sd[a-z]": {
+    "risk": "CRITICAL",
+    "explanation": "Discards all blocks on a block device."
+  },
+  "^echo 1 > /proc/sys/kernel/sysrq": {
+    "risk": "CRITICAL",
+    "explanation": "Enables dangerous kernel debugging shortcuts."
+  },
+  "^echo c > /proc/sysrq-trigger": {
+    "risk": "CRITICAL",
+    "explanation": "Triggers a kernel crash dump."
+  },
+  "^swapoff -a && dd if=/dev/zero of=/swapfile": {
+    "risk": "CRITICAL",
+    "explanation": "Disables and overwrites swap space."
+  },
+  "^rm -rf /root": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes root user’s home directory."
+  },
+  "^mount -o remount,ro /": {
+    "risk": "CRITICAL",
+    "explanation": "Remounts root filesystem read-only, potentially freezing system."
+  },
+  "^umount /": {
+    "risk": "CRITICAL",
+    "explanation": "Unmounts the root filesystem."
+  },
+  "^echo > /etc/shadow": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites the password file, locking all users out."
+  },
+  "^echo > /etc/passwd": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites user account definitions."
+  },
+  "^rm -rf /lib": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes essential shared libraries."
+  },
+  "^rm -rf /sbin": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes system binaries required for boot."
+  },
+  "^rm -rf /opt": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes optional software packages."
+  },
+  "^rm -rf /mnt": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes mount point data."
+  },
+  "^rm -rf /media": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes removable drive mount data."
+  },
+  "^rm -rf /dev": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes device nodes, breaking I/O."
+  },
+  "^rm -rf /proc": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes virtual process filesystem, breaking kernel communication."
+  },
+  "^rm -rf /sys": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes system interface filesystem, halting drivers."
+  },
+  "^dd if=/dev/urandom of=/dev/sda": {
+    "risk": "CRITICAL",
+    "explanation": "Fills entire disk with random garbage."
+  },
+  "^yes > /dev/sda": {
+    "risk": "CRITICAL",
+    "explanation": "Writes infinite data to disk until it fails."
+  },
+  "^cat /dev/zero > /dev/sda": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites disk with zeroes."
+  },
+  "^cat /dev/urandom > /dev/sda": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites disk with random bytes."
+  },
+  "^killall -9 .*": {
+    "risk": "CRITICAL",
+    "explanation": "Kills all instances of a specified process forcefully."
+  },
+  "^pkill -9 .*": {
+    "risk": "CRITICAL",
+    "explanation": "Force kills processes matching a pattern."
+  },
+  "^reboot -f": {
+    "risk": "CRITICAL",
+    "explanation": "Forces immediate reboot without sync."
+  },
+  "^halt -f": {
+    "risk": "CRITICAL",
+    "explanation": "Forces immediate halt without cleanup."
+  },
+  "^shutdown -h now": {
+    "risk": "CRITICAL",
+    "explanation": "Immediately shuts down the system."
+  },
+  "^shutdown -P now": {
+    "risk": "CRITICAL",
+    "explanation": "Powers off the system immediately."
+  },
+  "^shutdown -r now": {
+    "risk": "CRITICAL",
+    "explanation": "Reboots the system immediately."
+  },
+  "^systemctl poweroff": {
+    "risk": "CRITICAL",
+    "explanation": "Powers off the system."
+  },
+  "^systemctl reboot": {
+    "risk": "CRITICAL",
+    "explanation": "Reboots the system."
+  },
+  
+  "^systemctl halt": {
+    "risk": "CRITICAL",
+    "explanation": "Halts the system."
+  },
+  "^echo 0 > /proc/sys/kernel/hung_task_timeout_secs": {
+    "risk": "CRITICAL",
+    "explanation": "Disables detection of hung tasks."
+  },
+  "^echo 0 > /proc/sys/kernel/panic": {
+    "risk": "CRITICAL",
+    "explanation": "Disables kernel panic on critical errors."
+  },
+  "^iptables -F": {
+    "risk": "CRITICAL",
+    "explanation": "Flushes all firewall rules, exposing the system."
+  },
+  "^iptables -P INPUT ACCEPT": {
+    "risk": "CRITICAL",
+    "explanation": "Sets firewall policy to accept all incoming traffic."
+  },
+  "^iptables -P OUTPUT ACCEPT": {
+    "risk": "CRITICAL",
+    "explanation": "Sets firewall policy to accept all outgoing traffic."
+  },
+  "^iptables -P FORWARD ACCEPT": {
+    "risk": "CRITICAL",
+    "explanation": "Disables forwarding restrictions."
+  },
+  "^ufw disable": {
+    "risk": "CRITICAL",
+    "explanation": "Disables the Uncomplicated Firewall."
+  },
+  "^systemctl disable firewalld": {
+    "risk": "CRITICAL",
+    "explanation": "Disables the system firewall service."
+  },
+  "^systemctl stop firewalld": {
+    "risk": "CRITICAL",
+    "explanation": "Stops the firewall service immediately."
+  },
+  "^echo .* > /etc/resolv.conf": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites DNS resolver configuration."
+  },
+  "^rm -rf /tmp": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes temporary files, potentially affecting running services."
+  },
+  "^rm -rf /run": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes runtime process data."
+  },
+  "^rm -rf /lost\\+found": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes filesystem recovery directory."
+  },
+  "^rm -rf /srv": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes server data."
+  },
+  "^rm -rf /snap": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes snap packages and data."
+  },
+  "^systemctl disable systemd-logind": {
+    "risk": "CRITICAL",
+    "explanation": "Disables login manager, locking out users."
+  },
+  "^systemctl stop systemd-logind": {
+    "risk": "CRITICAL",
+    "explanation": "Stops login manager, preventing user logins."
+  },
+  "^echo > /etc/hostname": {
+    "risk": "CRITICAL",
+    "explanation": "Wipes system hostname."
+  },
+  "^echo > /etc/hosts": {
+    "risk": "CRITICAL",
+    "explanation": "Breaks local hostname resolution."
+  },
+  "^rm -rf /etc/network": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes network configuration files."
+  },
+  "^rm -rf /etc/ssh": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes SSH server configuration and keys."
+  },
+  "^rm -rf /etc/systemd": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes systemd service configurations."
+  },
+  "^rm -rf /etc/init.d": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes legacy init scripts."
+  },
+  "^rm -rf /etc/fstab": {
+    "risk": "CRITICAL",
+    "explanation": "Deletes filesystem mount configuration."
+  },
+  "^dd if=/dev/random of=/boot/grub": {
+    "risk": "CRITICAL",
+    "explanation": "Corrupts the bootloader."
+  },
+  "^grub-install .*": {
+    "risk": "CRITICAL",
+    "explanation": "Overwrites bootloader configuration."
+  },
+  "^echo > /etc/default/grub": {
+    "risk": "CRITICAL",
+    "explanation": "Corrupts GRUB bootloader settings."
+  },
+  "^update-grub": {
+    "risk": "CRITICAL",
+    "explanation": "Rewrites bootloader settings (potentially dangerous if misused)."
+  }
+}

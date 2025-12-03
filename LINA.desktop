@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LINA
+Comment=AI-Powered Cybersecurity Assistant - Install and Launch
+Exec=/home/kali/Desktop/FinalReady/launch_lina.sh
+Icon=terminal
+Terminal=true
+Categories=Security;Network;Development;
+StartupNotify=true
+Path=/home/kali/Desktop/FinalReady

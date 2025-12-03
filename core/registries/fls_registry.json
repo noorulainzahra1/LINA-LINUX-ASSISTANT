@@ -1,0 +1,14 @@
+{
+  "tool_name": "fls",
+  "base_command": "fls",
+  "parameters": [
+    { "flag": "-r", "description": "Recursive listing.", "keywords": ["recursive", "recursive listing"], "requires_value": false },
+    { "flag": "-p", "description": "Display full path.", "keywords": ["full path", "path"], "requires_value": false },
+    { "flag": "-l", "description": "Long listing format.", "keywords": ["long format", "detailed"], "requires_value": false },
+    { "flag": "-d", "description": "Display deleted files only.", "keywords": ["deleted files", "deleted only", "deleted"], "requires_value": false },
+    { "flag": "-m", "description": "Display MAC times.", "keywords": ["mac times", "timestamps"], "requires_value": false },
+    { "flag": "-o", "description": "Specify offset.", "keywords": ["offset", "start offset"], "requires_value": true },
+    { "flag": "-s", "description": "Display file size.", "keywords": ["file size", "size"], "requires_value": false },
+    { "flag": "", "description": "Disk image file path.", "keywords": ["disk image", "image file", "disk"], "requires_value": true, "position": 1 }
+  ]
+}

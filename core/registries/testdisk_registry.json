@@ -1,0 +1,21 @@
+{
+  "name": "testdisk",
+  "description": "A powerful free data recovery software designed to help recover lost partitions and/or make non-booting disks bootable again.",
+  "keywords": ["partition recovery", "boot repair", "data recovery", "disk analysis"],
+  "category": "Forensic Carving",
+  "usage": "testdisk [options]",
+  "examples": [
+    "testdisk /dev/sda",
+    "testdisk /path/to/image.dd",
+    "testdisk -cmd /dev/sda partition,list"
+  ],
+  "common_flags": {
+    "-cmd": "Command line mode",
+    "-log": "Log file",
+    "-d": "Debug mode",
+    "-q": "Quiet mode"
+  },
+  "output_format": "text",
+  "installation": "apt install testdisk",
+  "documentation": "https://www.cgsecurity.org/wiki/TestDisk"
+}

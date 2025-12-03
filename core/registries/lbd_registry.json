@@ -1,0 +1,20 @@
+{
+  "name": "lbd",
+  "description": "Load Balancer Detector - A tool to detect if a given domain uses load balancing via multiple detection methods.",
+  "keywords": ["load balancer", "detection", "web analysis", "infrastructure"],
+  "category": "Web Scanning",
+  "usage": "lbd [options] domain",
+  "examples": [
+    "lbd example.com",
+    "lbd -p 80,443 example.com",
+    "lbd -t 5 example.com"
+  ],
+  "common_flags": {
+    "-p": "Ports to check",
+    "-t": "Timeout in seconds",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install lbd",
+  "documentation": "https://github.com/drwetter/lbd"
+}

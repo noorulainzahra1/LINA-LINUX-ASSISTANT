@@ -1,0 +1,54 @@
+{
+  "tool_name": "tcpdump",
+  "base_command": "tcpdump",
+  "parameters": [
+    {
+      "flag": "-i",
+      "description": "Network interface to capture from (e.g., eth0, any).",
+      "keywords": ["interface", "device"],
+      "requires_value": true
+    },
+    {
+      "flag": "-c",
+      "description": "Number of packets to capture before stopping.",
+      "keywords": ["count", "packets"],
+      "requires_value": true
+    },
+    {
+      "flag": "-w",
+      "description": "Write captured packets to a file (pcap format).",
+      "keywords": ["write", "output", "pcap"],
+      "requires_value": true
+    },
+    {
+      "flag": "-r",
+      "description": "Read packets from a file.",
+      "keywords": ["read", "file", "pcap"],
+      "requires_value": true
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose output, more packet details.",
+      "keywords": ["verbose", "detailed"],
+      "requires_value": false
+    },
+    {
+      "flag": "-n",
+      "description": "Don't convert addresses to names.",
+      "keywords": ["numeric", "no dns"],
+      "requires_value": false
+    },
+    {
+      "flag": "host",
+      "description": "Capture packets to/from specific host.",
+      "keywords": ["host", "ip", "filter"],
+      "requires_value": true
+    },
+    {
+      "flag": "port",
+      "description": "Capture packets on specific port.",
+      "keywords": ["port", "service", "filter"],
+      "requires_value": true
+    }
+  ]
+}

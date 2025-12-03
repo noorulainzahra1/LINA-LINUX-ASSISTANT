@@ -1,0 +1,15 @@
+Analyze the risk of the following Linux Bash command: `{command}`
+
+Is this command potentially destructive or does it require elevated (sudo/root) privileges to function correctly or safely?
+-   **Destructive actions include**: irreversible data deletion (`rm -rf`), data modification, filesystem formatting (`mkfs`), or significant system configuration changes.
+-   **Privilege requirements**: Actions that typically fail or are unsafe without `sudo`, like modifying system files, managing services, or installing packages.
+
+Your response MUST be one of the following two formats ONLY:
+1.  If RISKY: Respond with "Risky: [A brief, one-sentence explanation of the primary risk]."
+    -   Example for `rm -rf /`: "Risky: Forcefully and recursively deletes the entire root filesystem without confirmation."
+    -   Example for `apt install nginx`: "Risky: Modifies the system by installing new software and typically requires sudo privileges."
+    -   Example for `mkfs.ext4 /dev/sda1`: "Risky: Formats a disk partition, causing complete and irreversible data loss."
+
+2.  If NOT RISKY: Respond with the single word "Safe".
+
+Do not provide any other text, greetings, or explanations.

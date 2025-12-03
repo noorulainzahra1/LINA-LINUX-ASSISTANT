@@ -1,0 +1,21 @@
+{
+  "name": "dnsmap",
+  "description": "A DNS network mapper that discovers subdomains by brute-forcing DNS queries using a wordlist.",
+  "keywords": ["dns mapping", "subdomain brute-force", "dns discovery", "network mapping"],
+  "category": "DNS Information",
+  "usage": "dnsmap [options] domain",
+  "examples": [
+    "dnsmap example.com",
+    "dnsmap -w wordlist.txt example.com",
+    "dnsmap -r example.com"
+  ],
+  "common_flags": {
+    "-w": "Wordlist file",
+    "-r": "Reverse DNS lookup",
+    "-t": "Number of threads",
+    "-o": "Output file"
+  },
+  "output_format": "text",
+  "installation": "apt install dnsmap",
+  "documentation": "https://github.com/makefu/dnsmap"
+}

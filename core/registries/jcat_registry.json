@@ -1,0 +1,21 @@
+{
+  "name": "jcat",
+  "description": "A Sleuth Kit tool that displays the contents of a file based on its journal entry.",
+  "keywords": ["journal content", "file system", "forensic tool", "journal analysis"],
+  "category": "Sleuth Kit",
+  "usage": "jcat [options] image [images] journal_inode",
+  "examples": [
+    "jcat image.dd 8",
+    "jcat -f ntfs image.dd 8",
+    "jcat -o 512 image.dd 8"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "binary/text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/jcat.html"
+}

@@ -1,0 +1,67 @@
+{
+  "tool_name": "hydra",
+  "base_command": "hydra",
+  "parameters": [
+    {
+      "flag": "-L",
+      "description": "Path to a username wordlist for the attack.",
+      "keywords": ["username list", "users", "wordlist"],
+      "requires_value": true
+    },
+    {
+      "flag": "-l",
+      "description": "Single username to try for all attempts.",
+      "keywords": ["username", "user"],
+      "requires_value": true
+    },
+    {
+      "flag": "-P",
+      "description": "Path to a password wordlist.",
+      "keywords": ["password list", "passlist", "wordlist"],
+      "requires_value": true
+    },
+    {
+      "flag": "-p",
+      "description": "Single password to use for all attempts.",
+      "keywords": ["password"],
+      "requires_value": true
+    },
+    {
+      "flag": "-s",
+      "description": "Specify a non-default port (e.g., 2222).",
+      "keywords": ["port", "service port"],
+      "requires_value": true
+    },
+    {
+      "flag": "-t",
+      "description": "Number of parallel tasks/threads (default 16).",
+      "keywords": ["threads", "speed"],
+      "requires_value": true
+    },
+    {
+      "flag": "-V",
+      "description": "Verbosity: Print progress of attempts in real time.",
+      "keywords": ["verbose", "progress"],
+      "requires_value": false
+    },
+    {
+      "flag": "-f",
+      "description": "Exit when a login/password pair is found.",
+      "keywords": ["stop on success", "exit"],
+      "requires_value": false
+    },
+    {
+      "flag": "-o",
+      "description": "Write results to an output file.",
+      "keywords": ["output", "save", "file"],
+      "requires_value": true
+    },
+    {
+      "flag": null,
+      "description": "Target service and host in the format service://hostname (e.g., ssh://10.10.10.10).",
+      "keywords": ["target", "service", "host"],
+      "requires_value": true,
+      "is_positional": true
+    }
+  ]
+}

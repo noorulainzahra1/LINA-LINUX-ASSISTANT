@@ -1,0 +1,15 @@
+{
+  "tool_name": "volatility3", 
+  "base_command": "vol3",
+  "alternate_commands": ["volatility3", "python3 -m volatility3"],
+  "parameters": [
+    { "flag": "-f", "description": "Memory dump file path.", "keywords": ["memory dump", "dump file", "memory file"], "requires_value": true },
+    { "flag": "--profile", "description": "OS profile for memory dump.", "keywords": ["profile", "os profile"], "requires_value": true },
+    { "flag": "windows.pslist", "description": "List running processes.", "keywords": ["process list", "processes", "pslist"], "requires_value": false },
+    { "flag": "windows.netscan", "description": "Scan for network connections.", "keywords": ["network scan", "connections", "netscan"], "requires_value": false },
+    { "flag": "windows.malfind", "description": "Find hidden and injected code.", "keywords": ["malware", "injection", "hidden code", "malfind"], "requires_value": false },
+    { "flag": "windows.hashdump", "description": "Dump password hashes.", "keywords": ["password hashes", "hashdump", "credentials"], "requires_value": false },
+    { "flag": "windows.filescan", "description": "Scan for file objects.", "keywords": ["file scan", "files"], "requires_value": false },
+    { "flag": "windows.cmdline", "description": "Display command line arguments.", "keywords": ["command line", "cmdline", "arguments"], "requires_value": false }
+  ]
+}

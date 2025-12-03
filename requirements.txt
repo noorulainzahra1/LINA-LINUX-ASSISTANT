@@ -1,0 +1,121 @@
+# LINA Phoenix Architecture - Python Dependencies
+# Framework: Learned Intelligence for Networked Assessments
+# Architecture: Phoenix (Unified Agent System)
+# Version: 3.0 - Ultimate Implementation
+# 
+# Installation: pip install -r requirements.txt
+# Or use: python setup.py install
+
+# === CORE FRAMEWORK ===
+python-dotenv>=1.0.0,<2.0.0          # Environment variable management
+rich>=13.7.0,<14.0.0                 # Professional CLI interface with beautiful formatting
+requests>=2.31.0,<3.0.0              # HTTP client for APIs and web requests
+typing-extensions>=4.8.0,<5.0.0      # Enhanced type hints for better code quality
+dotenv 
+# === AI & LLM INTEGRATION ===
+google-generativeai>=0.3.2,<1.0.0    # Google Gemini AI (Primary AI Provider)
+
+# === ASYNC & NETWORKING ===
+aiohttp>=3.9.1,<4.0.0                # Async HTTP client for concurrent operations
+pydantic>=2.5.0,<3.0.0               # Data validation and settings management
+
+# === API FRAMEWORK ===
+fastapi>=0.104.1,<1.0.0              # FastAPI web framework
+uvicorn[standard]>=0.24.0,<1.0.0     # ASGI server for FastAPI
+websockets>=12.0,<13.0.0              # WebSocket support for real-time streaming
+python-socketio>=5.10.0,<6.0.0       # Socket.IO support (optional, for advanced features)
+python-multipart>=0.0.6,<1.0.0       # Multipart form support
+
+# === SYSTEM INTEGRATION ===
+psutil>=5.9.6,<6.0.0                 # System and process utilities for monitoring
+pathlib2>=2.3.7; python_version<"3.4"  # Backport of pathlib for older Python
+
+# === DATABASE & PERSISTENCE ===
+sqlalchemy>=2.0.23,<3.0.0            # Database ORM for session management
+                            # Built-in SQLite support (included in Python)
+
+# === SECURITY & CRYPTOGRAPHY ===
+cryptography>=41.0.7,<42.0.0         # Cryptographic recipes and primitives
+hashlib                              # Secure hash algorithms (built-in)
+
+# === DATA PROCESSING ===
+json                                 # JSON encoder/decoder (built-in)
+csv                                  # CSV file operations (built-in)
+datetime                             # Date and time handling (built-in)
+uuid                                 # UUID generation (built-in)
+re                                   # Regular expressions (built-in)
+
+# === NETWORKING & PROTOCOLS ===
+urllib3>=2.1.0,<3.0.0               # HTTP client with advanced features
+socket                               # Low-level networking (built-in)
+
+# === FILE & SYSTEM OPERATIONS ===
+shutil                               # High-level file operations (built-in)
+os                                   # Operating system interface (built-in)
+sys                                  # System-specific parameters (built-in)
+subprocess                           # Subprocess management (built-in)
+tempfile                             # Temporary file operations (built-in)
+
+# === DEVELOPMENT & TESTING ===
+pytest>=7.4.3,<8.0.0                # Testing framework
+pytest-asyncio>=0.21.1,<1.0.0       # Async testing support
+pytest-cov>=4.1.0,<5.0.0            # Coverage testing
+black>=23.11.0,<24.0.0               # Code formatting
+flake8>=6.1.0,<7.0.0                # Code linting
+isort>=5.12.0,<6.0.0                # Import sorting
+
+# === OPTIONAL ENHANCEMENTS ===
+# Uncomment these for enhanced functionality:
+# jupyter>=1.0.0,<2.0.0             # Interactive notebooks for analysis
+# matplotlib>=3.8.2,<4.0.0          # Plotting library for visualizations  
+# pandas>=2.1.4,<3.0.0              # Data analysis library
+# numpy>=1.26.2,<2.0.0              # Numerical computing
+# seaborn>=0.13.0,<1.0.0            # Statistical data visualization
+
+# === SYSTEM TOOL REQUIREMENTS ===
+# The following cybersecurity tools should be installed via system package manager:
+#
+# NETWORK SECURITY TOOLS:
+# - nmap (network mapper and port scanner)
+# - masscan (high-speed port scanner)
+# - rustscan (modern fast port scanner)
+# - gobuster (directory/file enumeration)
+# - dirb (web content scanner)
+# - nikto (web vulnerability scanner)
+# - sqlmap (SQL injection testing)
+# - hydra (login cracker)
+# - wfuzz (web application fuzzer)
+# - subfinder (subdomain discovery)
+# - sublist3r (subdomain enumeration)
+# - httpx (HTTP toolkit)
+# - whatweb (web technology identifier)
+# - wafw00f (web application firewall detector)
+# - wpscan (WordPress security scanner)
+#
+# DIGITAL FORENSICS TOOLS:
+# - volatility3 (memory forensics framework)
+# - foremost (file carving tool)
+# - autopsy (digital forensics platform)
+# - sleuthkit (forensic toolkit)
+# - binwalk (firmware analysis tool)
+# - testdisk (data recovery utility)
+# - photorec (file recovery utility)
+# - scrounge-ntfs (NTFS file recovery)
+# - magicrescue (file carving tool)
+#
+# SYSTEM UTILITIES:
+# - tmux (terminal multiplexer)
+# - curl (HTTP client)
+# - wget (file downloader)
+# - netcat (networking utility)
+# - tcpdump (network packet analyzer)
+# - tshark (network protocol analyzer)
+# - dig (DNS lookup utility)
+# - whois (domain information lookup)
+# - nslookup (DNS query tool)
+#
+# INSTALLATION COMMANDS:
+# Kali Linux: sudo apt update && sudo apt install -y [tool-names]
+# Ubuntu/Debian: sudo apt update && sudo apt install -y [tool-names]  
+# Arch Linux: sudo pacman -S [tool-names]
+# macOS: brew install [tool-names]

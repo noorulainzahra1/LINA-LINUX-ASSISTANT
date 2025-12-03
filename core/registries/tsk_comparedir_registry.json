@@ -1,0 +1,21 @@
+{
+  "name": "tsk_comparedir",
+  "description": "A Sleuth Kit tool that compares two directories and reports differences.",
+  "keywords": ["directory comparison", "file comparison", "forensic tool", "difference analysis"],
+  "category": "Sleuth Kit",
+  "usage": "tsk_comparedir [options] dir1 dir2",
+  "examples": [
+    "tsk_comparedir /dir1/ /dir2/",
+    "tsk_comparedir -v /dir1/ /dir2/",
+    "tsk_comparedir -r /dir1/ /dir2/"
+  ],
+  "common_flags": {
+    "-v": "Verbose output",
+    "-r": "Recursive comparison",
+    "-h": "Help",
+    "-V": "Version"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/tsk_comparedir.html"
+}

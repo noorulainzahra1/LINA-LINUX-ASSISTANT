@@ -1,0 +1,50 @@
+{
+  "tool_name": "netcat",
+  "base_command": "nc",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Target hostname or IP address.",
+      "keywords": ["host", "target", "ip"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": null,
+      "description": "Port number to connect to or listen on.",
+      "keywords": ["port", "service"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-l",
+      "description": "Listen mode, for inbound connects.",
+      "keywords": ["listen", "server mode"],
+      "requires_value": false
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose mode, show connection details.",
+      "keywords": ["verbose", "debug"],
+      "requires_value": false
+    },
+    {
+      "flag": "-n",
+      "description": "Do not perform DNS lookups.",
+      "keywords": ["no dns", "numeric"],
+      "requires_value": false
+    },
+    {
+      "flag": "-z",
+      "description": "Zero-I/O mode, used for scanning ports.",
+      "keywords": ["scan", "port scan", "zero io"],
+      "requires_value": false
+    },
+    {
+      "flag": "-e",
+      "description": "Execute a command after connection (spawn shell).",
+      "keywords": ["execute", "shell", "bind"],
+      "requires_value": true
+    }
+  ]
+}

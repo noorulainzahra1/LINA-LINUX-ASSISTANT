@@ -1,0 +1,32 @@
+{
+  "tool_name": "nslookup",
+  "base_command": "nslookup",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Domain name or IP address to look up.",
+      "keywords": ["domain", "hostname", "ip"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": null,
+      "description": "DNS server to use for the query (optional).",
+      "keywords": ["dns server", "nameserver"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-type",
+      "description": "DNS record type to query (A, AAAA, MX, NS, PTR, etc.).",
+      "keywords": ["record type", "dns type"],
+      "requires_value": true
+    },
+    {
+      "flag": "-debug",
+      "description": "Enable debug mode for detailed output.",
+      "keywords": ["debug", "verbose"],
+      "requires_value": false
+    }
+  ]
+}

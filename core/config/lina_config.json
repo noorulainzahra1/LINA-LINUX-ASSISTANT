@@ -1,0 +1,12 @@
+{
+  "llm_providers": {
+    "google": {
+      "api_key_env_var": "GOOGLE_API_KEY",
+      "model": "gemini-2.0-flash"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "data/logs/lina_activity.log"
+  }
+}

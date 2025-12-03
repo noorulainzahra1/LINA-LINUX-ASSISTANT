@@ -1,0 +1,21 @@
+{
+  "name": "wafw00f",
+  "description": "A tool to identify and fingerprint Web Application Firewall (WAF) products protecting a website.",
+  "keywords": ["waf detection", "web application firewall", "security testing", "fingerprinting"],
+  "category": "Web Scanning",
+  "usage": "wafw00f [options] URL",
+  "examples": [
+    "wafw00f http://example.com",
+    "wafw00f -a http://example.com",
+    "wafw00f -v http://example.com"
+  ],
+  "common_flags": {
+    "-a": "List all WAFs",
+    "-v": "Verbose output",
+    "-f": "Format output",
+    "-p": "Proxy server"
+  },
+  "output_format": "text",
+  "installation": "apt install wafw00f",
+  "documentation": "https://github.com/EnableSecurity/wafw00f"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "photorec",
+  "description": "A powerful file recovery tool designed to recover lost files including videos, documents and archives from hard disks and CDRom.",
+  "keywords": ["file recovery", "photo recovery", "data recovery", "deleted files"],
+  "category": "Forensic Carving",
+  "usage": "photorec [options]",
+  "examples": [
+    "photorec /dev/sda1",
+    "photorec /path/to/image.dd",
+    "photorec -cmd /dev/sda1 fileopt,jpg,enable,search"
+  ],
+  "common_flags": {
+    "-cmd": "Command line mode",
+    "-d": "Output directory",
+    "-q": "Quiet mode",
+    "-log": "Log file"
+  },
+  "output_format": "files",
+  "installation": "apt install testdisk",
+  "documentation": "https://www.cgsecurity.org/wiki/PhotoRec"
+}

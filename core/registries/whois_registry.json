@@ -1,0 +1,13 @@
+{
+  "tool_name": "whois",
+  "base_command": "whois",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "The target domain name or IP address to look up. This is a positional argument.",
+      "keywords": ["target", "domain", "ip address"],
+      "requires_value": true,
+      "is_positional": true
+    }
+  ]
+}

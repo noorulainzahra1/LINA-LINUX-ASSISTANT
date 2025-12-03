@@ -1,0 +1,20 @@
+{
+  "name": "recon-ng",
+  "description": "A full-featured Web Reconnaissance framework written in Python with independent modules and database interaction.",
+  "keywords": ["reconnaissance", "web recon", "framework", "python"],
+  "category": "Web Scanning",
+  "usage": "recon-ng [options]",
+  "examples": [
+    "recon-ng",
+    "recon-ng -w example.com",
+    "recon-ng -m recon/domains-hosts/hackertarget"
+  ],
+  "common_flags": {
+    "-w": "Workspace name",
+    "-m": "Module to run",
+    "-o": "Module options"
+  },
+  "output_format": "text",
+  "installation": "apt install recon-ng",
+  "documentation": "https://github.com/lanmaster53/recon-ng"
+}

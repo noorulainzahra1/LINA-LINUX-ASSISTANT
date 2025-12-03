@@ -1,0 +1,21 @@
+{
+  "name": "tsk_recover",
+  "description": "A Sleuth Kit tool that recovers files from a disk image based on file system metadata.",
+  "keywords": ["file recovery", "data recovery", "forensic tool", "file extraction"],
+  "category": "Sleuth Kit",
+  "usage": "tsk_recover [options] image [images] output_dir",
+  "examples": [
+    "tsk_recover image.dd /recovery/",
+    "tsk_recover -f ntfs image.dd /recovery/",
+    "tsk_recover -o 512 image.dd /recovery/"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "files",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/tsk_recover.html"
+}

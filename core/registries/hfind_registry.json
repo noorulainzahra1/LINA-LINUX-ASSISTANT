@@ -1,0 +1,21 @@
+{
+  "name": "hfind",
+  "description": "A Sleuth Kit tool that looks up a hash value in a hash database to find the corresponding file name.",
+  "keywords": ["hash lookup", "hash database", "forensic tool", "file identification"],
+  "category": "Sleuth Kit",
+  "usage": "hfind [options] hash",
+  "examples": [
+    "hfind 5d41402abc4b2a76b9719d911017c592",
+    "hfind -f nsfrl2.txt 5d41402abc4b2a76b9719d911017c592",
+    "hfind -i nsfrl2.txt 5d41402abc4b2a76b9719d911017c592"
+  ],
+  "common_flags": {
+    "-f": "Hash database file",
+    "-i": "Import hash database",
+    "-v": "Verbose output",
+    "-h": "Help"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/hfind.html"
+}

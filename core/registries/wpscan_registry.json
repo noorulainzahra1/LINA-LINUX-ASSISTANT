@@ -1,0 +1,48 @@
+{
+  "tool_name": "wpscan",
+  "base_command": "wpscan",
+  "parameters": [
+    {
+      "flag": "--url",
+      "description": "Target WordPress site URL (e.g., https://example.com).",
+      "keywords": ["url", "target", "wordpress"],
+      "requires_value": true
+    },
+    {
+      "flag": "--enumerate",
+      "description": "Enumeration options (e.g., u for users, vp for vulnerable plugins).",
+      "keywords": ["enumerate", "users", "plugins", "themes"],
+      "requires_value": true
+    },
+    {
+      "flag": "--api-token",
+      "description": "WPScan vulnerability database API token for up-to-date findings.",
+      "keywords": ["api", "token", "database"],
+      "requires_value": true
+    },
+    {
+      "flag": "--passwords",
+      "description": "Path to a password list for brute forcing logins.",
+      "keywords": ["password list", "wordlist"],
+      "requires_value": true
+    },
+    {
+      "flag": "--usernames",
+      "description": "Path to a username list for brute forcing logins.",
+      "keywords": ["username list", "users"],
+      "requires_value": true
+    },
+    {
+      "flag": "--detection-mode",
+      "description": "Detection mode (mixed, passive, aggressive).",
+      "keywords": ["detection", "mode", "aggressive"],
+      "requires_value": true
+    },
+    {
+      "flag": "--random-user-agent",
+      "description": "Use a random user agent for each request.",
+      "keywords": ["user agent", "stealth"],
+      "requires_value": false
+    }
+  ]
+}

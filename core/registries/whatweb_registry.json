@@ -1,0 +1,21 @@
+{
+  "name": "whatweb",
+  "description": "A web scanner that identifies websites and their technologies including web servers, CMS, frameworks, and more.",
+  "keywords": ["web technology detection", "fingerprinting", "cms detection", "web scanner"],
+  "category": "Web Scanning",
+  "usage": "whatweb [options] URL",
+  "examples": [
+    "whatweb http://example.com",
+    "whatweb -a 3 http://example.com",
+    "whatweb --log-json=output.json http://example.com"
+  ],
+  "common_flags": {
+    "-a": "Aggression level",
+    "--log-json": "JSON output",
+    "--log-xml": "XML output",
+    "-v": "Verbose output"
+  },
+  "output_format": "text/json/xml",
+  "installation": "apt install whatweb",
+  "documentation": "https://github.com/urbanadventurer/WhatWeb"
+}

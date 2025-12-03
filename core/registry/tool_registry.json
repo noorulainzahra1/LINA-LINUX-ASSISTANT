@@ -1,0 +1,956 @@
+[
+  {
+    "name": "nmap",
+    "description": "A powerful network scanning tool for host discovery, port scanning, OS detection, and service versioning.",
+    "keywords": [
+      "scan",
+      "network",
+      "port scan",
+      "host discovery"
+    ],
+    "category": "Network Security",
+    "risk_level": "LOW"
+  },
+  {
+    "name": "whois",
+    "description": "A utility to look up registration information for a domain name or IP address.",
+    "keywords": [
+      "domain lookup",
+      "whois",
+      "recon"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "gobuster",
+    "description": "A tool for brute-forcing directories and files on web servers to find hidden content.",
+    "keywords": [
+      "directory brute-force",
+      "web scan",
+      "find directories",
+      "dirbust"
+    ],
+    "category": "Web Security",
+    "risk_level": "LOW"
+  },
+  {
+    "name": "sqlmap",
+    "description": "An automatic SQL injection and database takeover tool.",
+    "keywords": [
+      "sql injection",
+      "sqli",
+      "database hack"
+    ],
+    "category": "Web Security",
+    "risk_level": "HIGH"
+  },
+  {
+    "name": "hydra",
+    "description": "A parallelized network logon cracker which supports numerous protocols to attack.",
+    "keywords": [
+      "brute-force",
+      "password crack",
+      "login attack"
+    ],
+    "category": "Password Cracking",
+    "risk_level": "HIGH"
+  },
+  {
+    "name": "nikto",
+    "description": "A web server scanner which performs comprehensive tests for vulnerabilities.",
+    "keywords": [
+      "web vulnerability",
+      "cve scan",
+      "web scan"
+    ],
+    "category": "Web Security",
+    "risk_level": "LOW"
+  },
+  {
+    "name": "feroxbuster",
+    "description": "A fast, simple, recursive content discovery tool written in Rust.",
+    "keywords": [
+      "fast directory scan",
+      "content discovery"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "wpscan",
+    "description": "A black box WordPress security scanner.",
+    "keywords": [
+      "wordpress",
+      "wp scan"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "searchsploit",
+    "description": "A command-line search tool for the Exploit-DB database.",
+    "keywords": [
+      "find exploit",
+      "exploit-db"
+    ],
+    "category": "Exploitation",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "msfvenom",
+    "description": "A payload generator that is part of the Metasploit Framework.",
+    "keywords": [
+      "payload",
+      "reverse shell",
+      "meterpreter"
+    ],
+    "category": "Exploitation",
+    "risk_level": "HIGH"
+  },
+  {
+    "name": "dig",
+    "description": "A flexible tool for interrogating DNS name servers and performing DNS lookups.",
+    "keywords": [
+      "dns",
+      "domain lookup",
+      "dns query"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "nslookup",
+    "description": "A network administration command-line tool for querying DNS to obtain domain records.",
+    "keywords": [
+      "dns lookup",
+      "name server",
+      "domain info"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "curl",
+    "description": "A command-line tool for transferring data from or to servers using various protocols.",
+    "keywords": [
+      "http request",
+      "web request",
+      "api test"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "wget",
+    "description": "A free utility for non-interactive download of files from the Web.",
+    "keywords": [
+      "download",
+      "web download",
+      "fetch file"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "netcat",
+    "description": "A networking utility for reading from and writing to network connections using TCP or UDP.",
+    "keywords": [
+      "network",
+      "tcp",
+      "udp",
+      "connection"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "masscan",
+    "description": "An Internet-scale port scanner that can scan the entire Internet in under 5 minutes.",
+    "keywords": [
+      "fast port scan",
+      "mass scan",
+      "internet scan"
+    ],
+    "category": "Network Security",
+    "risk_level": "LOW"
+  },
+  {
+    "name": "rustscan",
+    "description": "A modern, fast port scanner that finds open ports quickly and feeds them to nmap.",
+    "keywords": [
+      "fast scan",
+      "port discovery",
+      "rust"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "dirb",
+    "description": "A web content scanner that looks for existing directories and files.",
+    "keywords": [
+      "directory scan",
+      "web enum",
+      "content discovery"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "dirbuster",
+    "description": "A multi-threaded application designed to brute force directories and files on web servers.",
+    "keywords": [
+      "directory brute-force",
+      "web directories"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "ffuf",
+    "description": "Fast web fuzzer written in Go for discovering web content and parameters.",
+    "keywords": [
+      "fuzzing",
+      "web fuzzer",
+      "parameter discovery"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "enum4linux",
+    "description": "A tool for enumerating information from Windows and Samba systems.",
+    "keywords": [
+      "smb enum",
+      "windows enum",
+      "samba"
+    ],
+    "category": "System Enumeration",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "smbclient",
+    "description": "A client that can access SMB/CIFS resources on servers.",
+    "keywords": [
+      "smb",
+      "file sharing",
+      "windows shares"
+    ],
+    "category": "System Enumeration",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "nbtscan",
+    "description": "A program for scanning IP networks for NetBIOS name information.",
+    "keywords": [
+      "netbios",
+      "network scan",
+      "windows network"
+    ],
+    "category": "System Enumeration",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "snmpwalk",
+    "description": "An SNMP application that uses SNMP GETNEXT requests to query a network entity.",
+    "keywords": [
+      "snmp",
+      "network management",
+      "device info"
+    ],
+    "category": "System Enumeration",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "john",
+    "description": "John the Ripper password cracker for various password hash types.",
+    "keywords": [
+      "password crack",
+      "hash crack",
+      "john the ripper"
+    ],
+    "category": "Password Cracking",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "hashcat",
+    "description": "Advanced password recovery tool supporting numerous hash and cipher types.",
+    "keywords": [
+      "password crack",
+      "gpu crack",
+      "hash recovery"
+    ],
+    "category": "Password Cracking",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "aircrack-ng",
+    "description": "A complete suite of tools to assess WiFi network security.",
+    "keywords": [
+      "wifi crack",
+      "wireless",
+      "wep",
+      "wpa"
+    ],
+    "category": "Wireless Security",
+    "risk_level": "HIGH"
+  },
+  {
+    "name": "reaver",
+    "description": "A brute force attack tool against WPS (WiFi Protected Setup).",
+    "keywords": [
+      "wps attack",
+      "wifi",
+      "wireless crack"
+    ],
+    "category": "Wireless Security",
+    "risk_level": "HIGH"
+  },
+  {
+    "name": "tcpdump",
+    "description": "A powerful command-line packet analyzer for network traffic monitoring.",
+    "keywords": [
+      "packet capture",
+      "network monitor",
+      "traffic analysis"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "tshark",
+    "description": "A network protocol analyzer that captures and displays packet details.",
+    "keywords": [
+      "wireshark",
+      "packet analysis",
+      "network forensics"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "ngrep",
+    "description": "A network packet analyzer that allows grep-like searching through network traffic.",
+    "keywords": [
+      "network grep",
+      "packet search",
+      "traffic filter"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "arp-scan",
+    "description": "A tool to discover and fingerprint IP hosts on the local network using ARP.",
+    "keywords": [
+      "arp scan",
+      "network discovery",
+      "local network"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "netdiscover",
+    "description": "An active/passive ARP reconnaissance tool used to discover live hosts on a network.",
+    "keywords": [
+      "network discovery",
+      "arp discovery",
+      "host discovery"
+    ],
+    "category": "Network Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "dnsrecon",
+    "description": "A DNS enumeration script that performs various DNS reconnaissance techniques.",
+    "keywords": [
+      "dns enum",
+      "dns recon",
+      "subdomain discovery"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "dnsenum",
+    "description": "A comprehensive DNS enumeration tool for gathering DNS information.",
+    "keywords": [
+      "dns enumeration",
+      "subdomain enum",
+      "dns brute-force"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "fierce",
+    "description": "A domain scanner that attempts to locate non-contiguous IP space and hostnames.",
+    "keywords": [
+      "domain scan",
+      "subdomain discovery",
+      "dns brute-force"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "volatility3",
+    "description": "Advanced memory forensics framework for analyzing memory dumps to find malware, processes, and artifacts.",
+    "keywords": [
+      "memory analysis",
+      "memory dump",
+      "malware analysis",
+      "process list",
+      "memory forensics",
+      "volatility"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "foremost",
+    "description": "Data recovery and file carving tool to extract files from disk images and raw data.",
+    "keywords": [
+      "file carving",
+      "data recovery",
+      "extract files",
+      "recover deleted files",
+      "carve files"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "fls",
+    "description": "SleuthKit tool to list files and directories in disk images and file systems.",
+    "keywords": [
+      "list files",
+      "disk analysis",
+      "file system",
+      "sleuthkit",
+      "deleted files"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "fsstat",
+    "description": "SleuthKit tool to display file system details and statistics from disk images.",
+    "keywords": [
+      "file system info",
+      "disk info",
+      "fs details",
+      "sleuthkit",
+      "filesystem"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "mmls",
+    "description": "SleuthKit tool to display partition layouts and volume information from disk images.",
+    "keywords": [
+      "partition info",
+      "disk partitions",
+      "volume info",
+      "sleuthkit",
+      "partition table"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "autopsy",
+    "description": "Digital forensics platform for analyzing disk images, memory dumps, and other evidence.",
+    "keywords": [
+      "digital forensics",
+      "disk analysis",
+      "forensics platform",
+      "evidence analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "binwalk",
+    "description": "Firmware analysis tool to extract and analyze embedded files and filesystems.",
+    "keywords": [
+      "firmware analysis",
+      "embedded files",
+      "extract firmware",
+      "binary analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "strings",
+    "description": "Extract printable strings from binary files to find embedded text, URLs, and credentials.",
+    "keywords": [
+      "extract strings",
+      "binary strings",
+      "text extraction",
+      "binary analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "dnsmap",
+    "description": "A DNS network mapper that discovers subdomains by brute-forcing DNS queries using a wordlist.",
+    "keywords": [
+      "dns mapping",
+      "subdomain brute-force",
+      "dns discovery",
+      "network mapping"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "lbd",
+    "description": "Load Balancer Detector - A tool to detect if a given domain uses load balancing via multiple detection methods.",
+    "keywords": [
+      "load balancer",
+      "detection",
+      "web analysis",
+      "infrastructure"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "recon-ng",
+    "description": "A full-featured Web Reconnaissance framework written in Python with independent modules and database interaction.",
+    "keywords": [
+      "reconnaissance",
+      "web recon",
+      "framework",
+      "python"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "wfuzz",
+    "description": "A web application fuzzer that can be used for finding resources not linked, brute forcing GET and POST parameters, and more.",
+    "keywords": [
+      "web fuzzing",
+      "brute force",
+      "parameter discovery",
+      "web testing"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "magicrescue",
+    "description": "A tool to recover files from a disk image or device by scanning for magic bytes and file signatures.",
+    "keywords": [
+      "file recovery",
+      "magic bytes",
+      "forensic carving",
+      "data recovery"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "photorec",
+    "description": "A powerful file recovery tool designed to recover lost files including videos, documents and archives from hard disks and CDRom.",
+    "keywords": [
+      "file recovery",
+      "photo recovery",
+      "data recovery",
+      "deleted files"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "scalpel",
+    "description": "A fast file carver that reads a database of header and footer definitions and extracts matching files from a set of image files or raw device files.",
+    "keywords": [
+      "file carving",
+      "data recovery",
+      "forensic analysis",
+      "file extraction"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "scrounge-ntfs",
+    "description": "A tool for recovering deleted files from NTFS filesystems by analyzing the Master File Table (MFT) and recovering deleted file records.",
+    "keywords": [
+      "ntfs recovery",
+      "deleted files",
+      "mft analysis",
+      "windows forensics"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "testdisk",
+    "description": "A powerful free data recovery software designed to help recover lost partitions and/or make non-booting disks bootable again.",
+    "keywords": [
+      "partition recovery",
+      "boot repair",
+      "data recovery",
+      "disk analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "wafw00f",
+    "description": "A tool to identify and fingerprint Web Application Firewall (WAF) products protecting a website.",
+    "keywords": [
+      "waf detection",
+      "web application firewall",
+      "security testing",
+      "fingerprinting"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "wapiti",
+    "description": "A web application vulnerability scanner that performs black-box scans to detect security vulnerabilities in web applications.",
+    "keywords": [
+      "web vulnerability scanner",
+      "security testing",
+      "web application security",
+      "automated scanning"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "whatweb",
+    "description": "A web scanner that identifies websites and their technologies including web servers, CMS, frameworks, and more.",
+    "keywords": [
+      "web technology detection",
+      "fingerprinting",
+      "cms detection",
+      "web scanner"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "sublist3r",
+    "description": "A Python tool designed to enumerate subdomains of websites using OSINT techniques and passive reconnaissance.",
+    "keywords": [
+      "subdomain enumeration",
+      "osint",
+      "reconnaissance",
+      "passive scanning"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "subfinder",
+    "description": "A subdomain discovery tool that discovers valid subdomains for websites using passive online sources.",
+    "keywords": [
+      "subdomain discovery",
+      "passive reconnaissance",
+      "osint",
+      "subdomain enumeration"
+    ],
+    "category": "Information Gathering",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "httpx",
+    "description": "A fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.",
+    "keywords": [
+      "http toolkit",
+      "web probing",
+      "http testing",
+      "multi-threaded"
+    ],
+    "category": "Web Security",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "blkcat",
+    "description": "A Sleuth Kit tool that displays the contents of a data unit (block) from a disk image or device.",
+    "keywords": [
+      "block content",
+      "disk analysis",
+      "forensic tool",
+      "data unit"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "blkls",
+    "description": "A Sleuth Kit tool that lists the unallocated blocks of a file system in a disk image.",
+    "keywords": [
+      "unallocated blocks",
+      "disk analysis",
+      "forensic tool",
+      "file system"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "blkstat",
+    "description": "A Sleuth Kit tool that displays the statistics of a data unit (block) from a disk image.",
+    "keywords": [
+      "block statistics",
+      "disk analysis",
+      "forensic tool",
+      "data unit stats"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "ffind",
+    "description": "A Sleuth Kit tool that finds the file name(s) that point to a given meta data structure.",
+    "keywords": [
+      "file name finder",
+      "metadata analysis",
+      "forensic tool",
+      "file system"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "hfind",
+    "description": "A Sleuth Kit tool that looks up a hash value in a hash database to find the corresponding file name.",
+    "keywords": [
+      "hash lookup",
+      "hash database",
+      "forensic tool",
+      "file identification"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "icat",
+    "description": "A Sleuth Kit tool that displays the contents of a file based on its inode number.",
+    "keywords": [
+      "file content",
+      "inode",
+      "forensic tool",
+      "file extraction"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "ifind",
+    "description": "A Sleuth Kit tool that finds the inode that has a given meta data address.",
+    "keywords": [
+      "inode finder",
+      "metadata address",
+      "forensic tool",
+      "file system"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "ils",
+    "description": "A Sleuth Kit tool that lists the inode information of deleted files in a file system.",
+    "keywords": [
+      "inode list",
+      "deleted files",
+      "forensic tool",
+      "file system analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "img_cat",
+    "description": "A Sleuth Kit tool that displays the contents of a specific sector range in a disk image.",
+    "keywords": [
+      "sector content",
+      "disk image",
+      "forensic tool",
+      "sector analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "img_stat",
+    "description": "A Sleuth Kit tool that displays the statistics of a disk image including size, type, and other metadata.",
+    "keywords": [
+      "image statistics",
+      "disk image",
+      "forensic tool",
+      "metadata"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "istat",
+    "description": "A Sleuth Kit tool that displays the statistics of a specific inode in a file system.",
+    "keywords": [
+      "inode statistics",
+      "file system",
+      "forensic tool",
+      "metadata"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "jcat",
+    "description": "A Sleuth Kit tool that displays the contents of a file based on its journal entry.",
+    "keywords": [
+      "journal content",
+      "file system",
+      "forensic tool",
+      "journal analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "jls",
+    "description": "A Sleuth Kit tool that lists the entries in a file system journal.",
+    "keywords": [
+      "journal list",
+      "file system",
+      "forensic tool",
+      "journal entries"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "mactime",
+    "description": "A Sleuth Kit tool that creates a timeline of file activity based on file system metadata.",
+    "keywords": [
+      "timeline",
+      "file activity",
+      "forensic tool",
+      "metadata analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "mmcat",
+    "description": "A Sleuth Kit tool that displays the contents of a specific data unit in a disk image.",
+    "keywords": [
+      "data unit content",
+      "disk image",
+      "forensic tool",
+      "data analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "mmstat",
+    "description": "A Sleuth Kit tool that displays the statistics of a specific data unit in a disk image.",
+    "keywords": [
+      "data unit statistics",
+      "disk image",
+      "forensic tool",
+      "metadata"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "sigfind",
+    "description": "A Sleuth Kit tool that searches for a binary signature at a given offset in a disk image.",
+    "keywords": [
+      "signature search",
+      "binary search",
+      "forensic tool",
+      "pattern matching"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "sorter",
+    "description": "A Sleuth Kit tool that sorts files by type based on their file signatures.",
+    "keywords": [
+      "file sorting",
+      "file signatures",
+      "forensic tool",
+      "file classification"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "srch_strings",
+    "description": "A Sleuth Kit tool that searches for strings in a disk image or file.",
+    "keywords": [
+      "string search",
+      "text search",
+      "forensic tool",
+      "pattern matching"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "tsk_comparedir",
+    "description": "A Sleuth Kit tool that compares two directories and reports differences.",
+    "keywords": [
+      "directory comparison",
+      "file comparison",
+      "forensic tool",
+      "difference analysis"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "tsk_gettimes",
+    "description": "A Sleuth Kit tool that extracts and displays file system timestamps from a disk image.",
+    "keywords": [
+      "timestamps",
+      "file times",
+      "forensic tool",
+      "metadata extraction"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "tsk_loaddb",
+    "description": "A Sleuth Kit tool that loads file system metadata into a database for analysis.",
+    "keywords": [
+      "database loading",
+      "metadata",
+      "forensic tool",
+      "database creation"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  },
+  {
+    "name": "tsk_recover",
+    "description": "A Sleuth Kit tool that recovers files from a disk image based on file system metadata.",
+    "keywords": [
+      "file recovery",
+      "data recovery",
+      "forensic tool",
+      "file extraction"
+    ],
+    "category": "Digital Forensics",
+    "risk_level": "MEDIUM"
+  }
+]

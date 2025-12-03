@@ -1,0 +1,21 @@
+{
+  "tool_name": "strings",
+  "base_command": "strings",
+  "parameters": [
+    { "flag": "-a", "description": "Scan the entire file, not just the data section.", "keywords": ["all sections", "entire file", "complete scan"], "requires_value": false },
+    { "flag": "-d", "description": "Scan the data section only.", "keywords": ["data section", "data only"], "requires_value": false },
+    { "flag": "-f", "description": "Print the name of the file before each string.", "keywords": ["filename", "file name", "show file"], "requires_value": false },
+    { "flag": "-n", "description": "Specify minimum string length.", "keywords": ["minimum length", "string length", "min length"], "requires_value": true },
+    { "flag": "-t", "description": "Print the offset of each string.", "keywords": ["offset", "position", "location"], "requires_value": false },
+    { "flag": "-o", "description": "Print the offset of each string in octal.", "keywords": ["octal offset", "octal position"], "requires_value": false },
+    { "flag": "-x", "description": "Print the offset of each string in hex.", "keywords": ["hex offset", "hex position"], "requires_value": false },
+    { "flag": "-e", "description": "Specify character encoding.", "keywords": ["encoding", "character set", "charset"], "requires_value": true },
+    { "flag": "-s", "description": "Specify minimum string length (same as -n).", "keywords": ["minimum length", "string length", "min length"], "requires_value": true },
+    { "flag": "-w", "description": "Scan for wide character strings.", "keywords": ["wide strings", "unicode", "wide chars"], "requires_value": false },
+    { "flag": "-h", "description": "Show help.", "keywords": ["help", "usage"], "requires_value": false },
+    { "flag": "-v", "description": "Show version.", "keywords": ["version", "info"], "requires_value": false },
+    { "flag": "-V", "description": "Show version.", "keywords": ["version", "info"], "requires_value": false },
+    { "flag": "--help", "description": "Show help.", "keywords": ["help", "usage"], "requires_value": false },
+    { "flag": "--version", "description": "Show version.", "keywords": ["version", "info"], "requires_value": false }
+  ]
+}

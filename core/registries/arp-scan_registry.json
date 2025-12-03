@@ -1,0 +1,43 @@
+{
+  "tool_name": "arp-scan",
+  "base_command": "arp-scan",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Network range to scan (e.g., 192.168.1.0/24).",
+      "keywords": ["network", "range", "subnet"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-I",
+      "description": "Network interface to use for scanning.",
+      "keywords": ["interface", "device"],
+      "requires_value": true
+    },
+    {
+      "flag": "-l",
+      "description": "Use the local network range for the interface.",
+      "keywords": ["local", "auto range"],
+      "requires_value": false
+    },
+    {
+      "flag": "-g",
+      "description": "Generate target list from network range.",
+      "keywords": ["generate", "target list"],
+      "requires_value": false
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet mode, minimal output.",
+      "keywords": ["quiet", "minimal"],
+      "requires_value": false
+    },
+    {
+      "flag": "-x",
+      "description": "Display results in simple format.",
+      "keywords": ["simple", "basic format"],
+      "requires_value": false
+    }
+  ]
+}

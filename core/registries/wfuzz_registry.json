@@ -1,0 +1,21 @@
+{
+  "name": "wfuzz",
+  "description": "A web application fuzzer that can be used for finding resources not linked, brute forcing GET and POST parameters, and more.",
+  "keywords": ["web fuzzing", "brute force", "parameter discovery", "web testing"],
+  "category": "Web Scanning",
+  "usage": "wfuzz [options] URL",
+  "examples": [
+    "wfuzz -w wordlist.txt http://example.com/FUZZ",
+    "wfuzz -w wordlist.txt -d 'user=FUZZ&pass=FUZZ' http://example.com/login",
+    "wfuzz -w wordlist.txt -H 'Cookie: session=FUZZ' http://example.com"
+  ],
+  "common_flags": {
+    "-w": "Wordlist file",
+    "-d": "POST data",
+    "-H": "HTTP headers",
+    "-c": "Output in CSV format"
+  },
+  "output_format": "text",
+  "installation": "apt install wfuzz",
+  "documentation": "https://github.com/xmendez/wfuzz"
+}

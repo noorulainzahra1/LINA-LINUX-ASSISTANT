@@ -1,0 +1,21 @@
+{
+  "name": "img_stat",
+  "description": "A Sleuth Kit tool that displays the statistics of a disk image including size, type, and other metadata.",
+  "keywords": ["image statistics", "disk image", "forensic tool", "metadata"],
+  "category": "Sleuth Kit",
+  "usage": "img_stat [options] image [images]",
+  "examples": [
+    "img_stat image.dd",
+    "img_stat -s 512 image.dd",
+    "img_stat -v image.dd"
+  ],
+  "common_flags": {
+    "-s": "Sector size",
+    "-v": "Verbose output",
+    "-h": "Help",
+    "-V": "Version"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/img_stat.html"
+}

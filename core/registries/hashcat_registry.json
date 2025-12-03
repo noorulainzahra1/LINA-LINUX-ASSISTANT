@@ -1,0 +1,81 @@
+{
+  "tool_name": "hashcat",
+  "base_command": "hashcat",
+  "parameters": [
+    {
+      "flag": "-m",
+      "description": "Hash-type, refer to hashcat help for types (e.g., 0 for MD5, 1000 for NTLM).",
+      "keywords": ["mode", "hash type"],
+      "requires_value": true
+    },
+    {
+      "flag": "-a",
+      "description": "Attack-mode (0=Straight, 1=Combination, 3=Brute-force, 6=Hybrid Wordlist + Mask, 7=Hybrid Mask + Wordlist).",
+      "keywords": ["attack mode", "method"],
+      "requires_value": true
+    },
+    {
+      "flag": null,
+      "description": "Hash file or hash string to crack.",
+      "keywords": ["hash", "target", "hash_file", "file"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": null,
+      "description": "Wordlist file for dictionary attack.",
+      "keywords": ["wordlist", "dictionary"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-o",
+      "description": "Output file for cracked hashes.",
+      "keywords": ["output", "results"],
+      "requires_value": true
+    },
+    {
+      "flag": "--force",
+      "description": "Ignore warnings and force execution.",
+      "keywords": ["force", "ignore warnings"],
+      "requires_value": false
+    }
+  ],
+  "execution_metadata": {
+    "workflow_type": "multi-step",
+    "workflow": [
+      {
+        "step": "validate",
+        "type": "validate",
+        "description": "Validate hash file exists",
+        "validation_type": "file_exists",
+        "file_param": ["hash_file", "target", "file"],
+        "optional": false
+      },
+      {
+        "step": "execute",
+        "type": "command",
+        "description": "Execute hash cracking",
+        "command_template": "{base_command} -m {hash_type} -a {attack_mode} {hash_file} {wordlist} --force",
+        "requires": ["hash_file", "wordlist", "hash_type", "attack_mode"]
+      },
+      {
+        "step": "show_results",
+        "type": "command",
+        "description": "Display cracked passwords",
+        "command_template": "{base_command} --show {hash_file}",
+        "runs_after": "execute",
+        "optional": true
+      }
+    ],
+    "progress_patterns": [
+      "Status\\.+\\.*\\d+%",
+      "\\[.*\\] \\d+\\/\\d+ \\(.*%\\)"
+    ],
+    "output_parsing": {
+      "type": "text",
+      "success_pattern": "Status\\.+:Cracked",
+      "result_extraction": "password:hash"
+    }
+  }
+}

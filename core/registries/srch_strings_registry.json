@@ -1,0 +1,21 @@
+{
+  "name": "srch_strings",
+  "description": "A Sleuth Kit tool that searches for strings in a disk image or file.",
+  "keywords": ["string search", "text search", "forensic tool", "pattern matching"],
+  "category": "Sleuth Kit",
+  "usage": "srch_strings [options] image [images]",
+  "examples": [
+    "srch_strings image.dd",
+    "srch_strings -a image.dd",
+    "srch_strings -t d image.dd"
+  ],
+  "common_flags": {
+    "-a": "Search all data",
+    "-t": "Search type",
+    "-o": "Offset",
+    "-s": "Sector size"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/srch_strings.html"
+}

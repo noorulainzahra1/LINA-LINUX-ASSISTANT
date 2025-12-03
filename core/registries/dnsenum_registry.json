@@ -1,0 +1,21 @@
+{
+  "name": "dnsenum",
+  "description": "A comprehensive DNS enumeration tool for gathering DNS information, discovering subdomains, and performing zone transfers.",
+  "keywords": ["dns enumeration", "subdomain discovery", "zone transfer", "dns recon"],
+  "category": "DNS Information",
+  "usage": "dnsenum [options] domain",
+  "examples": [
+    "dnsenum example.com",
+    "dnsenum -f dnsfile.txt example.com",
+    "dnsenum -r example.com"
+  ],
+  "common_flags": {
+    "-f": "Read subdomains from file",
+    "-r": "Perform reverse lookups",
+    "-t": "Number of threads",
+    "-o": "Output file"
+  },
+  "output_format": "text",
+  "installation": "apt install dnsenum",
+  "documentation": "https://github.com/fwaeytens/dnsenum"
+}

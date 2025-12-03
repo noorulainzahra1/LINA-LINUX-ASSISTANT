@@ -1,0 +1,21 @@
+{
+  "name": "jls",
+  "description": "A Sleuth Kit tool that lists the entries in a file system journal.",
+  "keywords": ["journal list", "file system", "forensic tool", "journal entries"],
+  "category": "Sleuth Kit",
+  "usage": "jls [options] image [images]",
+  "examples": [
+    "jls image.dd",
+    "jls -f ntfs image.dd",
+    "jls -o 512 image.dd"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/jls.html"
+}

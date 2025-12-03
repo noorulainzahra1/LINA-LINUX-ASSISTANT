@@ -1,0 +1,55 @@
+{
+  "tool_name": "wget",
+  "base_command": "wget",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "URL to download from.",
+      "keywords": ["url", "link", "download"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-O",
+      "description": "Output filename to save as.",
+      "keywords": ["output", "filename", "save as"],
+      "requires_value": true
+    },
+    {
+      "flag": "-P",
+      "description": "Directory to save files to.",
+      "keywords": ["directory", "path", "save to"],
+      "requires_value": true
+    },
+    {
+      "flag": "-r",
+      "description": "Recursive download, follow links.",
+      "keywords": ["recursive", "follow links"],
+      "requires_value": false
+    },
+    {
+      "flag": "-c",
+      "description": "Continue partial downloads.",
+      "keywords": ["continue", "resume"],
+      "requires_value": false
+    },
+    {
+      "flag": "--user-agent",
+      "description": "User agent string to use.",
+      "keywords": ["user agent", "ua"],
+      "requires_value": true
+    },
+    {
+      "flag": "--header",
+      "description": "Additional HTTP header to send.",
+      "keywords": ["header", "http header"],
+      "requires_value": true
+    },
+    {
+      "flag": "-q",
+      "description": "Quiet mode, minimal output.",
+      "keywords": ["quiet", "silent"],
+      "requires_value": false
+    }
+  ]
+}

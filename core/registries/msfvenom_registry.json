@@ -1,0 +1,54 @@
+{
+  "tool_name": "msfvenom",
+  "base_command": "msfvenom",
+  "parameters": [
+    {
+      "flag": "-p",
+      "description": "Payload to generate (e.g., windows/meterpreter/reverse_tcp).",
+      "keywords": ["payload", "module"],
+      "requires_value": true
+    },
+    {
+      "flag": "LHOST",
+      "description": "Local host IP for reverse shells.",
+      "keywords": ["lhost", "listener", "ip"],
+      "requires_value": true
+    },
+    {
+      "flag": "LPORT",
+      "description": "Local port for the listener (default 4444).",
+      "keywords": ["lport", "port", "listener"],
+      "requires_value": true
+    },
+    {
+      "flag": "-f",
+      "description": "Output format (e.g., exe, elf, raw, python).",
+      "keywords": ["format", "output"],
+      "requires_value": true
+    },
+    {
+      "flag": "-o",
+      "description": "Output filename to write the payload to.",
+      "keywords": ["output", "file", "save"],
+      "requires_value": true
+    },
+    {
+      "flag": "--encrypt",
+      "description": "Apply encoder/encryption to payload (e.g., aes256).",
+      "keywords": ["encode", "encrypt", "obfuscate"],
+      "requires_value": true
+    },
+    {
+      "flag": "--encrypt-key",
+      "description": "Key to use for payload encryption if required by encoder.",
+      "keywords": ["encryption key", "key"],
+      "requires_value": true
+    },
+    {
+      "flag": "--iterations",
+      "description": "Number of encoding iterations (e.g., 5).",
+      "keywords": ["iterations", "encode"],
+      "requires_value": true
+    }
+  ]
+}

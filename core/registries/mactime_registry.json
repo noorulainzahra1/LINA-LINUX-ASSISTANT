@@ -1,0 +1,21 @@
+{
+  "name": "mactime",
+  "description": "A Sleuth Kit tool that creates a timeline of file activity based on file system metadata.",
+  "keywords": ["timeline", "file activity", "forensic tool", "metadata analysis"],
+  "category": "Sleuth Kit",
+  "usage": "mactime [options]",
+  "examples": [
+    "mactime -b bodyfile.txt",
+    "mactime -b bodyfile.txt -d",
+    "mactime -b bodyfile.txt -p"
+  ],
+  "common_flags": {
+    "-b": "Body file input",
+    "-d": "Day format",
+    "-p": "Pipe format",
+    "-h": "Help"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/mactime.html"
+}

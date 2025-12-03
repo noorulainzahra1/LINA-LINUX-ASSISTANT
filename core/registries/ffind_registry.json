@@ -1,0 +1,21 @@
+{
+  "name": "ffind",
+  "description": "A Sleuth Kit tool that finds the file name(s) that point to a given meta data structure.",
+  "keywords": ["file name finder", "metadata analysis", "forensic tool", "file system"],
+  "category": "Sleuth Kit",
+  "usage": "ffind [options] image [images] inode",
+  "examples": [
+    "ffind image.dd 12345",
+    "ffind -f ntfs image.dd 12345",
+    "ffind -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/ffind.html"
+}

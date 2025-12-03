@@ -1,0 +1,21 @@
+{
+  "name": "sublist3r",
+  "description": "A Python tool designed to enumerate subdomains of websites using OSINT techniques and passive reconnaissance.",
+  "keywords": ["subdomain enumeration", "osint", "reconnaissance", "passive scanning"],
+  "category": "DNS Information",
+  "usage": "sublist3r [options] -d domain",
+  "examples": [
+    "sublist3r -d example.com",
+    "sublist3r -d example.com -o subdomains.txt",
+    "sublist3r -d example.com -t 100"
+  ],
+  "common_flags": {
+    "-d": "Target domain",
+    "-o": "Output file",
+    "-t": "Number of threads",
+    "-e": "Search engines to use"
+  },
+  "output_format": "text",
+  "installation": "pip install sublist3r",
+  "documentation": "https://github.com/aboul3la/Sublist3r"
+}

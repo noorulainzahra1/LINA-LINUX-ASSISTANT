@@ -1,0 +1,55 @@
+{
+  "tool_name": "enum4linux",
+  "base_command": "enum4linux",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Target IP address or hostname to enumerate.",
+      "keywords": ["target", "ip", "host"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-a",
+      "description": "Do all simple enumeration (equivalent to -U -S -G -P -r -o -n -i).",
+      "keywords": ["all", "everything"],
+      "requires_value": false
+    },
+    {
+      "flag": "-U",
+      "description": "Get userlist from target.",
+      "keywords": ["users", "userlist"],
+      "requires_value": false
+    },
+    {
+      "flag": "-S",
+      "description": "Get sharelist from target.",
+      "keywords": ["shares", "sharelist"],
+      "requires_value": false
+    },
+    {
+      "flag": "-G",
+      "description": "Get group and member list from target.",
+      "keywords": ["groups", "members"],
+      "requires_value": false
+    },
+    {
+      "flag": "-P",
+      "description": "Get password policy information from target.",
+      "keywords": ["password policy", "policy"],
+      "requires_value": false
+    },
+    {
+      "flag": "-o",
+      "description": "Get OS information from target.",
+      "keywords": ["os", "operating system"],
+      "requires_value": false
+    },
+    {
+      "flag": "-v",
+      "description": "Verbose mode, show full commands being run.",
+      "keywords": ["verbose", "debug"],
+      "requires_value": false
+    }
+  ]
+}

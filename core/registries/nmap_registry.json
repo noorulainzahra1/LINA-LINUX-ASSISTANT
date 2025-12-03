@@ -1,0 +1,50 @@
+{
+  "tool_name": "nmap",
+  "base_command": "nmap",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Target host or IP address to scan.",
+      "keywords": ["target", "host", "ip"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    { "flag": "-sS", "description": "TCP SYN (stealth) scan.", "keywords": ["syn scan", "stealth"], "requires_value": false },
+    { "flag": "-sT", "description": "TCP connect scan.", "keywords": ["connect scan", "tcp"], "requires_value": false },
+    { "flag": "-sU", "description": "UDP scan.", "keywords": ["udp scan"], "requires_value": false },
+    { "flag": "-sV", "description": "Probe open ports for service/version info.", "keywords": ["version detection", "service version"], "requires_value": false },
+    { "flag": "-O", "description": "Enable OS detection.", "keywords": ["os detection", "fingerprint os"], "requires_value": false },
+    { "flag": "-A", "description": "Enable aggressive scanning (OS, version, script, traceroute).", "keywords": ["aggressive scan", "all checks"], "requires_value": false },
+    { "flag": "-p", "description": "Specifies ports to scan (e.g., 22-80 or 22,80,443).", "keywords": ["port", "ports"], "requires_value": true },
+    { "flag": "-p-", "description": "Scan all 65535 TCP ports.", "keywords": ["all ports", "full port scan"], "requires_value": false },
+    { "flag": "-F", "description": "Fast scan (100 most common ports).", "keywords": ["fast scan", "quick scan"], "requires_value": false },
+    { "flag": "-sn", "description": "Ping scan to discover live hosts without port scanning.", "keywords": ["ping scan", "host discovery"], "requires_value": false },
+    { "flag": "-Pn", "description": "Treat all hosts as online (skip host discovery).", "keywords": ["no ping", "skip discovery"], "requires_value": false },
+    { "flag": "-sC", "description": "Run default NSE scripts.", "keywords": ["script scan", "default scripts"], "requires_value": false },
+    { "flag": "--script", "description": "Run specific NSE scripts or categories.", "keywords": ["specific script", "custom script"], "requires_value": true },
+    { "flag": "-T", "description": "Set timing template (0-5, higher is faster).", "keywords": ["timing", "speed"], "requires_value": true },
+    { "flag": "-v", "description": "Increase verbosity level.", "keywords": ["verbose", "details"], "requires_value": false },
+    { "flag": "-oN", "description": "Save output in normal format to a file.", "keywords": ["output normal", "save file"], "requires_value": true },
+    { "flag": "-oA", "description": "Save output in all major formats at once.", "keywords": ["output all", "save all"], "requires_value": true }
+  ],
+  "execution_metadata": {
+    "workflow_type": "simple",
+    "output_parsing": {
+      "type": "text",
+      "fields": [
+        {
+          "name": "open_ports",
+          "pattern": "^(\\d+)/tcp\\s+open"
+        },
+        {
+          "name": "host_state",
+          "pattern": "Host is up|Host seems down"
+        }
+      ]
+    },
+    "progress_patterns": [
+      "Nmap scan report for",
+      "Scanned \\d+ port"
+    ]
+  }
+}

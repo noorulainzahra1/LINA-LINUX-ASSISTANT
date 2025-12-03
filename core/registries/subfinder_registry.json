@@ -1,0 +1,21 @@
+{
+  "name": "subfinder",
+  "description": "A subdomain discovery tool that discovers valid subdomains for websites using passive online sources.",
+  "keywords": ["subdomain discovery", "passive reconnaissance", "osint", "subdomain enumeration"],
+  "category": "DNS Information",
+  "usage": "subfinder [options] -d domain",
+  "examples": [
+    "subfinder -d example.com",
+    "subfinder -d example.com -o subdomains.txt",
+    "subfinder -d example.com -t 100 -silent"
+  ],
+  "common_flags": {
+    "-d": "Target domain",
+    "-o": "Output file",
+    "-t": "Number of threads",
+    "-silent": "Silent mode"
+  },
+  "output_format": "text",
+  "installation": "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest",
+  "documentation": "https://github.com/projectdiscovery/subfinder"
+}

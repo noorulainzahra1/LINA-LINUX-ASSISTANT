@@ -1,0 +1,21 @@
+{
+  "name": "istat",
+  "description": "A Sleuth Kit tool that displays the statistics of a specific inode in a file system.",
+  "keywords": ["inode statistics", "file system", "forensic tool", "metadata"],
+  "category": "Sleuth Kit",
+  "usage": "istat [options] image [images] inode",
+  "examples": [
+    "istat image.dd 12345",
+    "istat -f ntfs image.dd 12345",
+    "istat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/istat.html"
+}

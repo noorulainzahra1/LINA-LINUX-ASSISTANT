@@ -1,0 +1,21 @@
+{
+  "name": "mmcat",
+  "description": "A Sleuth Kit tool that displays the contents of a specific data unit in a disk image.",
+  "keywords": ["data unit content", "disk image", "forensic tool", "data analysis"],
+  "category": "Sleuth Kit",
+  "usage": "mmcat [options] image [images] data_unit",
+  "examples": [
+    "mmcat image.dd 12345",
+    "mmcat -f ntfs image.dd 12345",
+    "mmcat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "binary/text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/mmcat.html"
+}

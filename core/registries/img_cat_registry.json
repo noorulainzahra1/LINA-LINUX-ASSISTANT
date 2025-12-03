@@ -1,0 +1,21 @@
+{
+  "name": "img_cat",
+  "description": "A Sleuth Kit tool that displays the contents of a specific sector range in a disk image.",
+  "keywords": ["sector content", "disk image", "forensic tool", "sector analysis"],
+  "category": "Sleuth Kit",
+  "usage": "img_cat [options] image [images] start_sector [num_sectors]",
+  "examples": [
+    "img_cat image.dd 1000 10",
+    "img_cat -s 512 image.dd 1000 10",
+    "img_cat -v image.dd 1000 10"
+  ],
+  "common_flags": {
+    "-s": "Sector size",
+    "-v": "Verbose output",
+    "-h": "Help",
+    "-V": "Version"
+  },
+  "output_format": "binary/text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/img_cat.html"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "dirbuster",
+  "description": "A multi-threaded Java application designed to brute force directories and files names on web/application servers.",
+  "keywords": ["directory brute-force", "web scanning", "content discovery", "java"],
+  "category": "Web Scanning",
+  "usage": "dirbuster [options]",
+  "examples": [
+    "dirbuster -u http://example.com -l wordlist.txt",
+    "dirbuster -u https://target.com -e php,html,asp",
+    "dirbuster -u http://site.com -t 20"
+  ],
+  "common_flags": {
+    "-u": "Target URL",
+    "-l": "Wordlist file",
+    "-e": "File extensions",
+    "-t": "Number of threads"
+  },
+  "output_format": "text",
+  "installation": "apt install dirbuster",
+  "documentation": "https://github.com/KajanM/DirBuster"
+}

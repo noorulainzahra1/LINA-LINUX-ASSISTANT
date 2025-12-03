@@ -1,0 +1,54 @@
+{
+  "tool_name": "ffuf",
+  "base_command": "ffuf",
+  "parameters": [
+    {
+      "flag": "-u",
+      "description": "Target URL with FUZZ keyword where payloads will be placed.",
+      "keywords": ["url", "target"],
+      "requires_value": true
+    },
+    {
+      "flag": "-w",
+      "description": "Wordlist file path for fuzzing.",
+      "keywords": ["wordlist", "dictionary"],
+      "requires_value": true
+    },
+    {
+      "flag": "-X",
+      "description": "HTTP method to use.",
+      "keywords": ["method", "http method"],
+      "requires_value": true
+    },
+    {
+      "flag": "-H",
+      "description": "HTTP header to include in requests.",
+      "keywords": ["header", "http header"],
+      "requires_value": true
+    },
+    {
+      "flag": "-d",
+      "description": "POST data with FUZZ keyword.",
+      "keywords": ["data", "post data"],
+      "requires_value": true
+    },
+    {
+      "flag": "-mc",
+      "description": "Match HTTP status codes (comma separated).",
+      "keywords": ["match codes", "status codes"],
+      "requires_value": true
+    },
+    {
+      "flag": "-fc",
+      "description": "Filter HTTP status codes (comma separated).",
+      "keywords": ["filter codes", "exclude codes"],
+      "requires_value": true
+    },
+    {
+      "flag": "-t",
+      "description": "Number of concurrent threads.",
+      "keywords": ["threads", "concurrency"],
+      "requires_value": true
+    }
+  ]
+}

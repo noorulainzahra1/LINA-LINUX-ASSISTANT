@@ -1,0 +1,37 @@
+{
+  "tool_name": "searchsploit",
+  "base_command": "searchsploit",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Search query to look up (software name, version, CVE).",
+      "keywords": ["query", "search", "software"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "-w",
+      "description": "Display the full Exploit-DB URLs alongside results.",
+      "keywords": ["url", "web", "link"],
+      "requires_value": false
+    },
+    {
+      "flag": "-p",
+      "description": "Show the path to exploit POC files on disk.",
+      "keywords": ["path", "file"],
+      "requires_value": false
+    },
+    {
+      "flag": "-j",
+      "description": "Export results to JSON format.",
+      "keywords": ["json", "output"],
+      "requires_value": false
+    },
+    {
+      "flag": "-o",
+      "description": "Open matched exploit files with the default editor.",
+      "keywords": ["open", "editor"],
+      "requires_value": false
+    }
+  ]
+}

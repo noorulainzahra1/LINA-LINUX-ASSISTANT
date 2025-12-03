@@ -1,0 +1,31 @@
+{
+  "tool_name": "autopsy",
+  "base_command": "autopsy",
+  "parameters": [
+    { "flag": "--create", "description": "Create a new case.", "keywords": ["create case", "new case"], "requires_value": false },
+    { "flag": "--add", "description": "Add evidence to a case.", "keywords": ["add evidence", "add data"], "requires_value": false },
+    { "flag": "--analyze", "description": "Analyze evidence in a case.", "keywords": ["analyze", "analysis"], "requires_value": false },
+    { "flag": "--report", "description": "Generate a report from a case.", "keywords": ["generate report", "report"], "requires_value": false },
+    { "flag": "--case", "description": "Specify case name or path.", "keywords": ["case name", "case path"], "requires_value": true },
+    { "flag": "--data", "description": "Specify data source path.", "keywords": ["data source", "evidence path"], "requires_value": true },
+    { "flag": "--output", "description": "Specify output directory.", "keywords": ["output directory", "output path"], "requires_value": true },
+    { "flag": "--host", "description": "Specify hostname for remote analysis.", "keywords": ["hostname", "remote host"], "requires_value": true },
+    { "flag": "--port", "description": "Specify port for remote analysis.", "keywords": ["port", "remote port"], "requires_value": true },
+    { "flag": "--user", "description": "Specify username for authentication.", "keywords": ["username", "user"], "requires_value": true },
+    { "flag": "--password", "description": "Specify password for authentication.", "keywords": ["password", "auth"], "requires_value": true },
+    { "flag": "--timezone", "description": "Specify timezone for analysis.", "keywords": ["timezone", "time zone"], "requires_value": true },
+    { "flag": "--hash", "description": "Calculate file hashes.", "keywords": ["hash", "file hash", "checksum"], "requires_value": false },
+    { "flag": "--keyword", "description": "Search for keywords in files.", "keywords": ["keyword search", "text search"], "requires_value": true },
+    { "flag": "--regex", "description": "Search using regular expressions.", "keywords": ["regex", "regular expression"], "requires_value": true },
+    { "flag": "--email", "description": "Extract email messages.", "keywords": ["email", "mail", "messages"], "requires_value": false },
+    { "flag": "--image", "description": "Extract images from files.", "keywords": ["images", "pictures", "photos"], "requires_value": false },
+    { "flag": "--video", "description": "Extract video files.", "keywords": ["video", "movies", "videos"], "requires_value": false },
+    { "flag": "--audio", "description": "Extract audio files.", "keywords": ["audio", "sound", "music"], "requires_value": false },
+    { "flag": "--document", "description": "Extract document files.", "keywords": ["documents", "files", "docs"], "requires_value": false },
+    { "flag": "--archive", "description": "Extract archive files.", "keywords": ["archives", "zip", "compressed"], "requires_value": false },
+    { "flag": "--deleted", "description": "Recover deleted files.", "keywords": ["deleted files", "recovery"], "requires_value": false },
+    { "flag": "--timeline", "description": "Create timeline analysis.", "keywords": ["timeline", "time analysis"], "requires_value": false },
+    { "flag": "--browser", "description": "Extract browser data.", "keywords": ["browser", "web data"], "requires_value": false },
+    { "flag": "--registry", "description": "Analyze Windows registry.", "keywords": ["registry", "windows registry"], "requires_value": false }
+  ]
+}

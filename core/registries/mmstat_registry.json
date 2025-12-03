@@ -1,0 +1,21 @@
+{
+  "name": "mmstat",
+  "description": "A Sleuth Kit tool that displays the statistics of a specific data unit in a disk image.",
+  "keywords": ["data unit statistics", "disk image", "forensic tool", "metadata"],
+  "category": "Sleuth Kit",
+  "usage": "mmstat [options] image [images] data_unit",
+  "examples": [
+    "mmstat image.dd 12345",
+    "mmstat -f ntfs image.dd 12345",
+    "mmstat -o 512 image.dd 12345"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/mmstat.html"
+}

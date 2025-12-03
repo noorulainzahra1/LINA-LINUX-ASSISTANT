@@ -1,0 +1,21 @@
+{
+  "name": "sorter",
+  "description": "A Sleuth Kit tool that sorts files by type based on their file signatures.",
+  "keywords": ["file sorting", "file signatures", "forensic tool", "file classification"],
+  "category": "Sleuth Kit",
+  "usage": "sorter [options] image [images]",
+  "examples": [
+    "sorter image.dd",
+    "sorter -f ntfs image.dd",
+    "sorter -o /output/ image.dd"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Output directory",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "files",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/sorter.html"
+}

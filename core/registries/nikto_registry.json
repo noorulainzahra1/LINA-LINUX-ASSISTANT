@@ -1,0 +1,48 @@
+{
+  "tool_name": "nikto",
+  "base_command": "nikto",
+  "parameters": [
+    {
+      "flag": "-h",
+      "description": "Target host or URL to scan (e.g., https://example.com).",
+      "keywords": ["target", "host", "url"],
+      "requires_value": true
+    },
+    {
+      "flag": "-p",
+      "description": "Specify port(s) to test (e.g., 80,443 or 8080).",
+      "keywords": ["port", "ports"],
+      "requires_value": true
+    },
+    {
+      "flag": "-Tuning",
+      "description": "Tuning options to limit tests (e.g., '1 2 3' for specific vulnerability families).",
+      "keywords": ["tuning", "tests", "categories"],
+      "requires_value": true
+    },
+    {
+      "flag": "-ssl",
+      "description": "Force SSL mode for the request (useful if HTTPS not auto-detected).",
+      "keywords": ["ssl", "https"],
+      "requires_value": false
+    },
+    {
+      "flag": "-Display",
+      "description": "Control output verbosity (e.g., V for verbose details).",
+      "keywords": ["display", "verbosity", "output"],
+      "requires_value": true
+    },
+    {
+      "flag": "-output",
+      "description": "Write results to a file (HTML, CSV, NBE).",
+      "keywords": ["output", "save", "report"],
+      "requires_value": true
+    },
+    {
+      "flag": "-Format",
+      "description": "Specify report format (e.g., html, csv, nbe).",
+      "keywords": ["format", "report type"],
+      "requires_value": true
+    }
+  ]
+}

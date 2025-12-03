@@ -1,0 +1,21 @@
+{
+  "name": "sigfind",
+  "description": "A Sleuth Kit tool that searches for a binary signature at a given offset in a disk image.",
+  "keywords": ["signature search", "binary search", "forensic tool", "pattern matching"],
+  "category": "Sleuth Kit",
+  "usage": "sigfind [options] signature image [images]",
+  "examples": [
+    "sigfind 0x55AA image.dd",
+    "sigfind -o 510 0x55AA image.dd",
+    "sigfind -s 512 0x55AA image.dd"
+  ],
+  "common_flags": {
+    "-o": "Offset",
+    "-s": "Sector size",
+    "-v": "Verbose output",
+    "-h": "Help"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/sigfind.html"
+}

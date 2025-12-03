@@ -1,0 +1,21 @@
+{
+  "name": "scrounge-ntfs",
+  "description": "A tool for recovering deleted files from NTFS filesystems by analyzing the Master File Table (MFT) and recovering deleted file records.",
+  "keywords": ["ntfs recovery", "deleted files", "mft analysis", "windows forensics"],
+  "category": "Forensic Carving",
+  "usage": "scrounge-ntfs [options] device output_dir",
+  "examples": [
+    "scrounge-ntfs /dev/sda1 /recovery/",
+    "scrounge-ntfs -o /recovery/ /dev/sda1",
+    "scrounge-ntfs -v /dev/sda1 /recovery/"
+  ],
+  "common_flags": {
+    "-o": "Output directory",
+    "-v": "Verbose output",
+    "-f": "Force overwrite",
+    "-s": "Start sector"
+  },
+  "output_format": "files",
+  "installation": "apt install scrounge-ntfs",
+  "documentation": "https://github.com/pulkomandy/scrounge-ntfs"
+}

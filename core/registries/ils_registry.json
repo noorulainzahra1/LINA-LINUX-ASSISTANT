@@ -1,0 +1,21 @@
+{
+  "name": "ils",
+  "description": "A Sleuth Kit tool that lists the inode information of deleted files in a file system.",
+  "keywords": ["inode list", "deleted files", "forensic tool", "file system analysis"],
+  "category": "Sleuth Kit",
+  "usage": "ils [options] image [images]",
+  "examples": [
+    "ils image.dd",
+    "ils -f ntfs image.dd",
+    "ils -o 512 image.dd"
+  ],
+  "common_flags": {
+    "-f": "File system type",
+    "-o": "Sector offset",
+    "-s": "Sector size",
+    "-v": "Verbose output"
+  },
+  "output_format": "text",
+  "installation": "apt install sleuthkit",
+  "documentation": "https://www.sleuthkit.org/sleuthkit/man/ils.html"
+}

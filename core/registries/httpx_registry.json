@@ -1,0 +1,21 @@
+{
+  "name": "httpx",
+  "description": "A fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library.",
+  "keywords": ["http toolkit", "web probing", "http testing", "multi-threaded"],
+  "category": "Web Scanning",
+  "usage": "httpx [options]",
+  "examples": [
+    "httpx -l subdomains.txt",
+    "httpx -u http://example.com -title -tech-detect",
+    "httpx -l urls.txt -threads 100 -status-code"
+  ],
+  "common_flags": {
+    "-l": "List of URLs/domains",
+    "-u": "Single URL",
+    "-threads": "Number of threads",
+    "-title": "Extract page title"
+  },
+  "output_format": "text/json",
+  "installation": "go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest",
+  "documentation": "https://github.com/projectdiscovery/httpx"
+}

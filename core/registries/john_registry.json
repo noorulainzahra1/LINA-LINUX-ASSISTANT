@@ -1,0 +1,79 @@
+{
+  "tool_name": "john",
+  "base_command": "john",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Hash file to crack.",
+      "keywords": ["hash file", "passwords"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "--wordlist",
+      "description": "Wordlist file for dictionary attack.",
+      "keywords": ["wordlist", "dictionary"],
+      "requires_value": true
+    },
+    {
+      "flag": "--rules",
+      "description": "Apply word mangling rules.",
+      "keywords": ["rules", "mangling"],
+      "requires_value": true
+    },
+    {
+      "flag": "--format",
+      "description": "Hash format (e.g., md5, sha1, ntlm).",
+      "keywords": ["format", "hash type"],
+      "requires_value": true
+    },
+    {
+      "flag": "--show",
+      "description": "Show cracked passwords.",
+      "keywords": ["show", "results"],
+      "requires_value": false
+    },
+    {
+      "flag": "--incremental",
+      "description": "Incremental mode (brute force).",
+      "keywords": ["incremental", "brute force"],
+      "requires_value": true
+    }
+  ],
+  "execution_metadata": {
+    "workflow_type": "multi-step",
+    "workflow": [
+      {
+        "step": "validate",
+        "type": "validate",
+        "description": "Validate hash file exists",
+        "validation_type": "file_exists",
+        "file_param": "target",
+        "optional": false
+      },
+      {
+        "step": "execute",
+        "type": "command",
+        "description": "Execute password cracking",
+        "command_template": "{base_command} --format={format} --wordlist={wordlist} {target}",
+        "requires": ["target", "wordlist", "format"]
+      },
+      {
+        "step": "show_results",
+        "type": "command",
+        "description": "Display cracked passwords",
+        "command_template": "{base_command} --show {target}",
+        "runs_after": "execute",
+        "optional": true
+      }
+    ],
+    "progress_patterns": [
+      "\\d+%",
+      "\\d+ candidate"
+    ],
+    "output_parsing": {
+      "type": "text",
+      "success_pattern": "\\d+ password.*cracked"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+Create a step-by-step cybersecurity plan for this goal.
+
+**User's Goal:** "{user_goal}"
+
+**Available Tools:**
+{available_tools}
+
+**Instructions:**
+1. Analyze the goal and break it into logical phases
+2. Select appropriate tools in correct order (reconnaissance → scanning → analysis)
+3. Extract targets and parameters from the goal
+4. Use the EXACT tool names from the available tools list
+5. Generate complete, executable commands with proper syntax
+6. Return ONLY valid JSON
+
+**Output Format:**
+```json
+{{
+  "mission_summary": "Brief description of what will be done",
+  "risk_level": "LOW|MEDIUM|HIGH",
+  "estimated_time": "e.g., '10-20 minutes'",
+  "prerequisites": ["Any requirements or warnings"],
+  "plan": [
+    {{
+      "step": 1,
+      "phase": "RECONNAISSANCE|SCANNING|ANALYSIS|EXPLOITATION",
+      "tool_name": "tool_identifier",
+      "command_template": "actual command to run",
+      "description": "What this step achieves",
+      "expected_output": "What to look for in output"
+    }}
+  ]
+}}
+```
+
+**CRITICAL RULES:**
+- Output ONLY valid JSON - no markdown, no extra text
+- Use "command_template" not "arguments" for commands
+- command_template should be a STRING with the complete command
+- Follow cybersecurity methodology order: RECONNAISSANCE → SCANNING → ANALYSIS → EXPLOITATION
+- Be specific with targets and parameters
+- Use proper JSON syntax - no trailing commas, proper quotes
+- If user mentions specific tools (dig, whois, dnsenum), USE THOSE EXACT TOOLS
+- Generate realistic, executable commands with proper flags and syntax
+
+**Example for DNS enumeration:**
+```json
+{{
+  "mission_summary": "Perform comprehensive DNS enumeration on target.com using dig, whois, and dnsenum",
+  "risk_level": "LOW",
+  "estimated_time": "5-10 minutes",
+  "prerequisites": ["Network connectivity", "Permission to query DNS servers"],
+  "plan": [
+    {{
+      "step": 1,
+      "phase": "RECONNAISSANCE",
+      "tool_name": "dig",
+      "command_template": "dig target.com A",
+      "description": "Get A records for target.com",
+      "expected_output": "IPv4 addresses for target.com"
+    }},
+    {{
+      "step": 2,
+      "phase": "RECONNAISSANCE", 
+      "tool_name": "dig",
+      "command_template": "dig target.com NS",
+      "description": "Get name server records",
+      "expected_output": "Authoritative name servers"
+    }},
+    {{
+      "step": 3,
+      "phase": "RECONNAISSANCE",
+      "tool_name": "dig",
+      "command_template": "dig target.com MX",
+      "description": "Get mail exchange records",
+      "expected_output": "Mail server information"
+    }},
+    {{
+      "step": 4,
+      "phase": "RECONNAISSANCE",
+      "tool_name": "whois",
+      "command_template": "whois target.com",
+      "description": "Get domain registration information",
+      "expected_output": "Registrant details, creation/expiration dates"
+    }},
+    {{
+      "step": 5,
+      "phase": "RECONNAISSANCE",
+      "tool_name": "dnsenum",
+      "command_template": "dnsenum target.com",
+      "description": "Comprehensive DNS enumeration",
+      "expected_output": "Subdomains, DNS records, zone transfers"
+    }}
+  ]
+}}
+```
+
+**Your JSON Plan (JSON ONLY, NO MARKDOWN):**

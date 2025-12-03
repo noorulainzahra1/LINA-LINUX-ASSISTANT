@@ -1,0 +1,10 @@
+{
+  "tool_name": "fsstat",
+  "base_command": "fsstat",
+  "parameters": [
+    { "flag": "-f", "description": "File system type.", "keywords": ["filesystem type", "fs type"], "requires_value": true },
+    { "flag": "-o", "description": "Specify offset.", "keywords": ["offset", "start offset"], "requires_value": true },
+    { "flag": "-b", "description": "Display block information.", "keywords": ["block info", "blocks"], "requires_value": false },
+    { "flag": "", "description": "Disk image file path.", "keywords": ["disk image", "image file", "disk"], "requires_value": true, "position": 1 }
+  ]
+}

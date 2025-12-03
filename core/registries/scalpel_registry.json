@@ -1,0 +1,21 @@
+{
+  "name": "scalpel",
+  "description": "A fast file carver that reads a database of header and footer definitions and extracts matching files from a set of image files or raw device files.",
+  "keywords": ["file carving", "data recovery", "forensic analysis", "file extraction"],
+  "category": "Forensic Carving",
+  "usage": "scalpel [options] image_file",
+  "examples": [
+    "scalpel image.dd",
+    "scalpel -c scalpel.conf image.dd",
+    "scalpel -o /output/ image.dd"
+  ],
+  "common_flags": {
+    "-c": "Configuration file",
+    "-o": "Output directory",
+    "-b": "Block size",
+    "-r": "Read only"
+  },
+  "output_format": "files",
+  "installation": "apt install scalpel",
+  "documentation": "https://github.com/sleuthkit/scalpel"
+}

@@ -1,0 +1,38 @@
+{
+  "tool_name": "dig",
+  "base_command": "dig",
+  "parameters": [
+    {
+      "flag": null,
+      "description": "Domain name to query.",
+      "keywords": ["domain", "hostname"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": null,
+      "description": "Record type to query (A, AAAA, MX, NS, TXT, etc.).",
+      "keywords": ["record type", "dns type"],
+      "requires_value": true,
+      "is_positional": true
+    },
+    {
+      "flag": "@",
+      "description": "DNS server to use for the query.",
+      "keywords": ["dns server", "nameserver"],
+      "requires_value": true
+    },
+    {
+      "flag": "+short",
+      "description": "Provide a terse answer with minimal output.",
+      "keywords": ["short", "brief", "minimal"],
+      "requires_value": false
+    },
+    {
+      "flag": "+trace",
+      "description": "Trace the delegation path from the root name servers.",
+      "keywords": ["trace", "delegation"],
+      "requires_value": false
+    }
+  ]
+}

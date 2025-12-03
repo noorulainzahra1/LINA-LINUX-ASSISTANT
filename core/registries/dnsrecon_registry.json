@@ -1,0 +1,48 @@
+{
+  "tool_name": "dnsrecon",
+  "base_command": "dnsrecon",
+  "parameters": [
+    {
+      "flag": "-d",
+      "description": "Domain to enumerate.",
+      "keywords": ["domain", "target"],
+      "requires_value": true
+    },
+    {
+      "flag": "-t",
+      "description": "Type of enumeration (brt, srv, axfr, rvl, goo, snoop, tld, zonewalk).",
+      "keywords": ["type", "enumeration type"],
+      "requires_value": true
+    },
+    {
+      "flag": "-D",
+      "description": "Dictionary file for brute force enumeration.",
+      "keywords": ["dictionary", "wordlist"],
+      "requires_value": true
+    },
+    {
+      "flag": "-n",
+      "description": "DNS server to use.",
+      "keywords": ["nameserver", "dns server"],
+      "requires_value": true
+    },
+    {
+      "flag": "-r",
+      "description": "IP range for reverse lookup enumeration.",
+      "keywords": ["range", "reverse lookup"],
+      "requires_value": true
+    },
+    {
+      "flag": "--xml",
+      "description": "XML output file.",
+      "keywords": ["xml", "output"],
+      "requires_value": true
+    },
+    {
+      "flag": "--csv",
+      "description": "CSV output file.",
+      "keywords": ["csv", "output"],
+      "requires_value": true
+    }
+  ]
+}

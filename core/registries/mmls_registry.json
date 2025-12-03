@@ -1,0 +1,11 @@
+{
+  "tool_name": "mmls",
+  "base_command": "mmls",
+  "parameters": [
+    { "flag": "-t", "description": "Partition type.", "keywords": ["partition type", "type"], "requires_value": true },
+    { "flag": "-o", "description": "Specify offset.", "keywords": ["offset", "start offset"], "requires_value": true },
+    { "flag": "-i", "description": "Data unit format.", "keywords": ["data format", "unit format"], "requires_value": true },
+    { "flag": "-b", "description": "Display in bytes.", "keywords": ["bytes", "byte format"], "requires_value": false },
+    { "flag": "", "description": "Disk image file path.", "keywords": ["disk image", "image file", "disk"], "requires_value": true, "position": 1 }
+  ]
+}
